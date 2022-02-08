@@ -873,11 +873,27 @@
                 <label for="inputStatus">Status</label>
                 <select id="inputStatus" class="form-control custom-select">
                   <option selected disabled>Select one</option>
-                  <option>On Hold</option>
-                  <option>Canceled</option>
+                  <option>Work in progress</option>
                   <option>Success</option>
+                  <option>Canceled</option>
+                  <option>On Hold</option>
                 </select>
               </div>
+
+              <div class="form-group">
+                <label>Start date</label>
+                <div class="input-group date">
+                  <input id="projectStartDate" type="date" class="form-control datetimepicker-input" onblur="setMinForProjectEndDate()">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>End date</label>
+                <div class="input-group date" >
+                  <input id="projectEndDate" type="date" class="form-control datetimepicker-input">
+                </div>
+              </div>
+
               <div class="form-group">
                 <label for="inputClientCompany">Client Company</label>
                 <input type="text" id="inputClientCompany" class="form-control">
@@ -908,13 +924,17 @@
                 <input type="number" id="inputEstimatedBudget" class="form-control">
               </div>
               <div class="form-group">
+                <label for="inputEstimatedHours">Estimated Hours</label>
+                <input type="number" id="inputEstimatedHours" class="form-control">
+              </div>
+              <!-- <div class="form-group">
                 <label for="inputSpentBudget">Total amount spent</label>
                 <input type="number" id="inputSpentBudget" class="form-control">
               </div>
               <div class="form-group">
                 <label for="inputEstimatedDuration">Estimated project duration</label>
                 <input type="number" id="inputEstimatedDuration" class="form-control">
-              </div>
+              </div> -->
             </div>
             <!-- /.card-body -->
           </div>
@@ -955,5 +975,7 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+
+<script type="text/javascript" src="../../src/js/addProject.js"></script>
 </body>
 </html>
