@@ -20,3 +20,7 @@ IdProjectStartDate.setAttribute("min", today);
 function setMinForProjectEndDate(){
     IdProjectEndDate.setAttribute("min", IdProjectStartDate.value);
 }
+
+$('#btnAddNewTask').click(function() {
+  $('#modal-newTask').modal('show');
+});
