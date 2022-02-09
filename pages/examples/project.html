@@ -915,6 +915,11 @@
                               <li class="list-inline-item">
                                   <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
                               </li>
+                              <li class="list-inline-item">
+                                <button id="btnAddMember" type="button" class="btn" data-toggle="modal" data-target="#modal-success">
+                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/plus.png">
+                                </button>
+                            </li>
                           </ul>
                       </td>
                       <td class="project_progress">
@@ -957,6 +962,9 @@
                               </li>
                               <li class="list-inline-item">
                                   <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
+                              </li>
+                              <li class="list-inline-item">
+                                <img alt="Avatar" class="table-avatar" src="../../dist/img/plus.png" onclick="btnAddMember()">
                               </li>
                           </ul>
                       </td>
@@ -1003,6 +1011,9 @@
                               </li>
                               <li class="list-inline-item">
                                   <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
+                              </li>
+                              <li class="list-inline-item">
+                                <img alt="Avatar" class="table-avatar" src="../../dist/img/plus.png" onclick="btnAddMember()">
                               </li>
                           </ul>
                       </td>
@@ -1053,6 +1064,9 @@
                               <li class="list-inline-item">
                                   <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
                               </li>
+                              <li class="list-inline-item">
+                                <img alt="Avatar" class="table-avatar" src="../../dist/img/plus.png" onclick="btnAddMember()">
+                              </li>
                           </ul>
                       </td>
                       <td class="project_progress">
@@ -1098,6 +1112,9 @@
                               </li>
                               <li class="list-inline-item">
                                   <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png">
+                              </li>
+                              <li class="list-inline-item">
+                                <img alt="Avatar" class="table-avatar" src="../../dist/img/plus.png"">
                               </li>
                           </ul>
                       </td>
@@ -1216,11 +1233,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 
-<script type="text/javascript">
-  $('#btnAddMember').click(function() {
-   $('#modal-newMember').modal('show');
-});
-</script>
+<script type="text/javascript" src="../../src/js/project_list_controller.js"></script>
 
 </body>
 </html>
