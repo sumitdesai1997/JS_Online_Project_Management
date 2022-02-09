@@ -244,7 +244,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper"  >
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -255,7 +255,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item active">Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -364,6 +364,227 @@
                   <option data-select2-id="35">Data analytics</option>
                   <option data-select2-id="36">Full-stack developer</option>
                   <option data-select2-id="37">Tech lead</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Email</label>
+                  <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                  <option selected="selected" data-select2-id="3">Alabama</option>
+                  <option data-select2-id="34">Alaska</option>
+                  <option data-select2-id="35">California</option>
+                  <option data-select2-id="36">Delaware</option>
+                  <option data-select2-id="37">Tennessee</option>
+                  <option data-select2-id="38">Texas</option>
+                  <option data-select2-id="39">Washington</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <!-- <button type="button" data-dismiss="modal">Close</button>
+              <button type="button">Save changes</button> -->
+
+              <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
+                Close
+              </button>
+
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
+                Save
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+   <!-- Content Wrapper. Contains page content -->
+   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1></h1>
+          </div>
+          <!-- <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Projects</li>
+            </ol>
+          </div> -->
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Recent Projects</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-striped projects">
+              <thead>
+                  <tr>
+                      <th style="width: 1%">
+                          No.
+                      </th>
+                      <th style="width: 20%">
+                          Project Name
+                      </th>
+                      <th style="width: 30%">
+                          Team Members
+                      </th>
+                      <th>
+                          Project Progress
+                      </th>
+                      <th style="width: 8%" class="text-center">
+                          Status
+                      </th>
+                      <th style="width: 20%">
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          1.
+                      </td>
+                      <td>
+                          <a>
+                              Project 1
+                          </a>
+                          <br/>
+                          <small>
+                              Created 02.01.2022
+                          </small>
+                      </td>
+                      <td>
+                          <ul class="list-inline">
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="dist/img/avatar2.png">
+                              </li>
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="dist/img/avatar.png">
+                              </li>
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="dist/img/avatar3.png">
+                              </li>
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="dist/img/avatar4.png">
+                              </li>
+                          </ul>
+                      </td>
+                      <td class="project_progress">
+                          <div class="progress progress-sm">
+                              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
+                              </div>
+                          </div>
+                          <small>
+                              57% Complete
+                          </small>
+                      </td>
+                      <td class="project-state">
+                          <span class="badge badge-success">Success</span>
+                      </td>
+                      <td class="project-actions text-right">
+                          <a class="btn btn-primary btn-sm" href="#">
+                              <i class="fas fa-folder">
+                              </i>
+                              View
+                          </a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          2.
+                      </td>
+                      <td>
+                          <a>
+                             Project 2
+                          </a>
+                          <br/>
+                          <small>
+                              Created 24.11.2020
+                          </small>
+                      </td>
+                      <td>
+                          <ul class="list-inline">
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="dist/img/avatar2.png">
+                              </li>
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="dist/img/avatar4.png">
+                              </li>
+                          </ul>
+                      </td>
+                      <td class="project_progress">
+                          <div class="progress progress-sm">
+                              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" style="width: 47%">
+                              </div>
+                          </div>
+                          <small>
+                              47% Complete
+                          </small>
+                      </td>
+                      <td class="project-state">
+                          <span class="badge badge-success">Success</span>
+                      </td>
+                      <td class="project-actions text-right">
+                          <a class="btn btn-primary btn-sm" href="#">
+                              <i class="fas fa-folder">
+                              </i>
+                              View
+                          </a>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+      <div class="modal fade" id="modal-newMember">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add new member</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="card-body">
+                
+                <div class="form-group">
+                  <label>Role of Member</label>
+                  <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                  <option selected="selected" data-select2-id="3">Alabama</option>
+                  <option data-select2-id="34">Alaska</option>
+                  <option data-select2-id="35">California</option>
+                  <option data-select2-id="36">Delaware</option>
+                  <option data-select2-id="37">Tennessee</option>
+                  <option data-select2-id="38">Texas</option>
+                  <option data-select2-id="39">Washington</option>
                   </select>
                 </div>
 
