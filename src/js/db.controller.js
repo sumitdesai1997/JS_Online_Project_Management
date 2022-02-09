@@ -1,6 +1,6 @@
 let db = null;
 let objectStore = null;
-let DBOpenReq = indexedDB.open('projectDB', 6);
+let DBOpenReq = indexedDB.open('projectDB', 1);
 
 DBOpenReq.addEventListener('error', (err) => {
     //Error occurred while trying to open DB
@@ -73,24 +73,24 @@ DBOpenReq.addEventListener('error', (err) => {
             "prodId": "001",
             "description" : "Fabric cotton Rayon"
           },
-          // {
-          //   "name" :"Long Tunic Dress",
-          //   "price" : "$30.00",
-          //   "prodId": "002",
-          //   "description" : " Material: Cotton"
-          // },
-          // {
-          //   "name" :"Vintage Party Wear Mesh Skirt",
-          //   "price" : "$35.00",
-          //   "prodId": "003",
-          //   "description" : "Free size fits till 38'' bust"
-          // },
-          // {
-          //   "name" :"Imported top",
-          //   "price" : "$40.00",
-          //   "prodId": "004",
-          //   "description" : ""
-          // }
+          {
+            "name" :"Long Tunic Dress",
+            "price" : "$30.00",
+            "prodId": "002",
+            "description" : " Material: Cotton"
+          },
+          {
+            "name" :"Vintage Party Wear Mesh Skirt",
+            "price" : "$35.00",
+            "prodId": "003",
+            "description" : "Free size fits till 38'' bust"
+          },
+          {
+            "name" :"Imported top",
+            "price" : "$40.00",
+            "prodId": "004",
+            "description" : ""
+          }
         ]
         localStorage.setItem('listProducts',JSON.stringify(listProducts));
       }
