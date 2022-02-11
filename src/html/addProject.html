@@ -302,10 +302,10 @@
                 <label for="inputClientCompany">Client Company</label>
                 <input type="text" id="inputClientCompany" class="form-control">
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="inputProjectLeader">Project Leader</label>
                 <input type="text" id="inputProjectLeader" class="form-control">
-              </div>
+              </div> -->
             </div>
             <!-- /.card-body -->
           </div>
@@ -348,7 +348,7 @@
       <div class="row">
         <div class="col-12" style="min-height: 60px;">
           <a href="#" class="btn btn-secondary form-inline">Cancel</a>
-          <input type="submit" value="Create" class="btn btn-success">
+          <input type="submit" onClick="addProject()"  value="Create" class="btn btn-success">
         </div>
       </div>
     </section>
@@ -381,5 +381,6 @@
 <script src="../../dist/js/demo.js"></script>
 
 <script type="text/javascript" src="../../src/js/create_project_controller.js"></script>
+<script type="text/javascript" src="../../src/js/db.controller.js"></script>
 </body>
 </html>
