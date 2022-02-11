@@ -1,7 +1,9 @@
 
   $('#btnAddMember').click(function() {
-    $('#modal-newMember').modal('show');
+    $('#modal-newMember').modal('show')
  });
+
+console.log("projects"+ getProjrcts())
 
 var projectList = [
     { projectname : "Red chillies", date : "29/06/2022", completion :  "47% complete", status : "About to Success" },

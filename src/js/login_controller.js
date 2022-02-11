@@ -4,7 +4,7 @@ var projectManagers =[]
 var members =[]
 
 var projectManager = {
-    name: "manager",
+    NAME: "manager",
     email: "manager@yopmail.com",
     password: 12345,
     role:"manager"

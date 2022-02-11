@@ -24,18 +24,14 @@ var loggedInUser = (user) => {
 }
 
 //Add New Project
-var getProjrcts = () => {
+var getProjects = () => {
   return JSON.parse(localStorage.getItem(PROJECTS) || "[]");
 }
 
+
 function createProject(project){
-  if(getProjrcts().length==0)
-  localStorage.setItem(PROJECTS, JSON.stringify(project));
-  else{
-    // var projectList = [];
-    // projectList.push(getProjrcts());
-    // projectList.push(project)
-    getProjrcts().push(project);
-    localStorage.setItem(PROJECTS, projectList.toString());
-  }
+  var projectList=getProjects()
+    projectList.push(project);
+    localStorage.setItem(PROJECTS, JSON.stringify(projectList));
+  
 };
