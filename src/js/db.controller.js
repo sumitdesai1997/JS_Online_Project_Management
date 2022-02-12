@@ -1,30 +1,44 @@
+let USERS= "users"
+
 let MANAGERS="managers"
 let MEMBERS="members"
 let PROJECTS="projects"
 let TASKS="tasks"
+let CURRENT_USER= "currentuser"
 
-var getManagers = () => {
-  return JSON.parse(localStorage.getItem(MANAGERS) || "[]");
-}
-var getTeamMembers = () => {
-  return JSON.parse(localStorage.getItem(MEMBERS) || "[]");
-}
 
-function addManagers(managers) {
-  if(getManagers().length==0)
-    localStorage.setItem(MANAGERS, JSON.stringify(managers));
+var getUsers = () => {
+  return JSON.parse(localStorage.getItem(USERS) || "[]");
+}
+// var getTeamMembers = () => {
+//   return JSON.parse(localStorage.getItem(MEMBERS) || "[]");
+// }
+
+function addUsers(users) {
+  if(getUsers().length==0)
+    localStorage.setItem(USERS, JSON.stringify(users));
 };
 
-function addMembers(memebers) {
-  if(getTeamMembers().length==0)
-    localStorage.setItem(MEMBERS, JSON.stringify(memebers));
-};
+// function addMembers(memebers) {
+//   if(getTeamMembers().length==0)
+//     localStorage.setItem(MEMBERS, JSON.stringify(memebers));
+// };
 
-var loggedInUser = (user) => {
-  localStorage.setItem("loggedInUser", JSON.stringify(user));
+function setCurrentUser(user) {
+  localStorage.setItem(CURRENT_USER, JSON.stringify(user));
 }
 
-//Add New Project
+function getCurrentUser(){
+  return JSON.parse(localStorage.getItem(CURRENT_USER)|| "");
+}
+function getCurrentRole(){
+  return JSON.parse(localStorage.getItem(CURRENT_USER)|| "").role;
+}
+function getCurrentUserId(){
+  return JSON.parse(localStorage.getItem(CURRENT_USER)|| "").email;
+}
+
+
 var getProjects = () => {
   return JSON.parse(localStorage.getItem(PROJECTS) || "[]");
 }

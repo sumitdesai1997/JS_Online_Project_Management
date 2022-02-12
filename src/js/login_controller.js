@@ -1,19 +1,19 @@
 
 
-var projectManagers =[]
-var members =[]
+var users =[]
+// var members =[]
 
-var projectManager = {
-    NAME: "manager",
+var user = {
+    name: "manager",
     email: "manager@yopmail.com",
     password: 12345,
     role:"manager"
    
 };
-projectManagers.push(projectManager)
-addManagers(projectManagers)
+users.push(user)
 
-var teamMemeber = {
+
+var user = {
     name: "member",
     email: "member@yopmail.com",
     password: 12345,
@@ -21,8 +21,9 @@ var teamMemeber = {
    
 };
 
-members.push(teamMemeber)
-addMembers(members)
+users.push(user)
+addUsers(users)
+//addMembers(members)
 
     
 
@@ -39,22 +40,24 @@ function performSignIn(){
     else if(signInPassword=="")
         alert("Enter Password First")
     else{
-        getManagers().forEach( manager => {
-            console.log(manager);
-            if(signInEmail == manager.email && signInPassword == manager.password) {
-                matchedUser = manager;
-                console.log(manager)
+        getUsers().forEach( user => {
+            console.log(user);
+            if(signInEmail == user.email && signInPassword == user.password) {
+                matchedUser = user;
+                console.log(user)
             }
         });
-        if(matchedUser==null){
-            getTeamMembers().forEach( member => {
-                console.log(member);
-                if(signInEmail == member.email && signInPassword == member.password) {
-                    matchedUser = member;
-                    console.log(member)
-                }
-            }); 
-        }
+        // if(matchedUser==null){
+        //     getTeamMembers().forEach( member => {
+        //         console.log(member);
+        //         if(signInEmail == member.email && signInPassword == member.password) {
+        //             matchedUser = member;
+        //             console.log(member)
+        //         }
+        //     }); 
+        // }
+
+        setCurrentUser(matchedUser)
         if(matchedUser==null){
             alert("User not found")
         }
