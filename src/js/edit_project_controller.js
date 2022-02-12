@@ -24,3 +24,40 @@ function setMinForProjectEndDate(){
 $('#btnAddNewTask').click(function() {
   $('#modal-newTask').modal('show');
 });
+
+class Task{
+
+  constructor(name, description, status, startDate, endDate, member, isTaskDependent, dependentTask, estimateTaskHours, estimateTaskBudget){
+    this.name = name;
+    this.description = description;
+    this.status = status;
+    this.startDate = startDate;
+    this.endDate = endDate;
+    this.member = member;
+    this.isTaskDependent = isTaskDependent;
+    this.dependentTask = dependentTask;
+    this.estimateTaskHours = estimateTaskHours;
+    this.estimateTaskBudget = estimateTaskBudget;
+  }
+}
+
+function addTask(){
+
+  let name = document.getElementById("taskInputName").value;
+  let description = document.getElementById("taskInputDescription").value;
+  let status = document.getElementById("taskInputStatus").value;
+  let startDate = document.getElementById("taskStartDate").value;
+  let endDate = document.getElementById("taskEndDate").value;
+  let member = document.getElementById("taskInputMemberEmail").value;
+  let taskdependant1 = document.getElementById("taskdependant1").value;
+  let taskdependant2 = document.getElementById("taskdependant2").value;
+  let dependentTask = document.getElementById("dependentTask").value;
+  let estimateTaskHours = document.getElementById("inputTaskHours").value;
+  let estimateTaskBudget = document.getElementById("inputTaskCost").value;
+
+  let isTaskDependent = document.getElementById("taskdependant1").value == "YES" ? "YES" : "NO";
+
+  var task = new Task(name, description, status, startDate, endDate, member, taskdependant1, taskdependant2, dependentTask, estimateTaskHours, estimateTaskBudget);
+
+  addTaskIntoDB(task);
+}

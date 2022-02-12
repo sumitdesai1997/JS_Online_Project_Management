@@ -524,16 +524,16 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="inputName">Task Name</label>
+                      <label for="taskInputName">Task Name</label>
                       <input type="text" id="inputName" class="form-control" value="AdminLTE">
                     </div>
                     <div class="form-group">
-                      <label for="inputDescription">Task Description</label>
+                      <label for="taskInputDescription">Task Description</label>
                       <textarea id="inputDescription" class="form-control" rows="6">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
                     </div>
 
                     <div class="form-group">
-                      <label for="inputStatus">Status</label>
+                      <label for="taskInputStatus">Status</label>
                       <select id="inputStatus" class="form-control custom-select">
                         <option selected disabled>Select one</option>
                         <option>Work in progress</option>
@@ -546,21 +546,21 @@
                     <div class="form-group">
                       <label>Start date</label>
                       <div class="input-group date">
-                        <input id="editprojectStartDate" type="date" class="form-control datetimepicker-input" onblur="setMinForProjectEndDate()">
+                        <input id="taskStartDate" type="date" class="form-control datetimepicker-input" onblur="setMinForProjectEndDate()">
                       </div>
                     </div>
 
                     <div class="form-group">
                       <label>End date</label>
                       <div class="input-group date" >
-                        <input id="editprojectEndDate" type="date" class="form-control datetimepicker-input">
+                        <input id="taskEndDate" type="date" class="form-control datetimepicker-input">
                       </div>
                     </div>
                   </div>  
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="inputMemberEmail">Member Email</label>
-                      <select id="inputMemberEmail" class="form-control custom-select">
+                      <label for="taskInputMemberEmail">Member Email</label>
+                      <select id="taskInputMemberEmail" class="form-control custom-select">
                         <option selected disabled>Select one</option>
                         <option>Member 1</option>
                         <option>Member 2</option>
@@ -571,18 +571,18 @@
                     <div class="form-group">
                       <label for="inputStatus">Is task dependent on other task?</label><br>
                       <div class="custom-control custom-radio">
-                        <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio">
-                        <label for="customRadio1" class="custom-control-label">Yes</label>
+                        <input class="custom-control-input" type="radio" id="taskdependant1" name="customRadio">
+                        <label for="taskdependant1" class="custom-control-label">Yes</label>
                       </div>
                       <div class="custom-control custom-radio">
-                        <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio" checked="">
-                        <label for="customRadio2" class="custom-control-label">No</label>
+                        <input class="custom-control-input" type="radio" id="taskdependant2" name="customRadio" checked="">
+                        <label for="taskdependant2" class="custom-control-label">No</label>
                       </div>
                     </div>
 
                     <div class="form-group">
-                      <label for="inputStatus">Select dependent task</label>
-                      <select id="inputStatus" class="form-control custom-select">
+                      <label for="dependentTask">Select dependent task</label>
+                      <select id="dependentTask" class="form-control custom-select">
                         <option selected disabled>Select one</option>
                         <option>Task 1</option>
                         <option>Task 2</option>
@@ -596,7 +596,7 @@
                     </div>
                     <div class="form-group">
                       <label for="inputTaskCost">Task Cost</label>
-                      <input type="number" id="inputTaskHours" class="form-control" value="Deveint Inc">
+                      <input type="number" id="inputTaskCost" class="form-control" value="Deveint Inc">
                     </div>
                     
                   </div>
@@ -611,7 +611,7 @@
                 Close
               </button>
 
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
+              <button type="button" class="btn btn-success" onclick ="addTask()" data-toggle="modal" data-target="#modal-success">
                 Save
               </button>
             </div>
@@ -652,5 +652,6 @@
 <script src="../../dist/js/demo.js"></script>
 
 <script type="text/javascript" src="../../src/js/edit_project_controller.js"></script>
+<script type="text/javascript" src="../../src/js/db.controller.js"></script>
 </body>
 </html>

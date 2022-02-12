@@ -1,6 +1,7 @@
 let MANAGERS="managers"
 let MEMBERS="members"
 let PROJECTS="projects"
+let TASKS="tasks"
 
 var getManagers = () => {
   return JSON.parse(localStorage.getItem(MANAGERS) || "[]");
@@ -33,5 +34,16 @@ function createProject(project){
   var projectList=getProjects()
     projectList.push(project);
     localStorage.setItem(PROJECTS, JSON.stringify(projectList));
+  
+};
+
+var getTasks = () => {
+  return JSON.parse(localStorage.getItem(TASKS) || "[]");
+}
+
+function addTaskIntoDB(task){
+  var taskList = getTasks()
+  taskList.push(task);
+  localStorage.setItem(TASKS, JSON.stringify(taskList));
   
 };
