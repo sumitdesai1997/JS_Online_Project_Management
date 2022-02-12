@@ -33,24 +33,24 @@ class Project {
   }
 }
 function addProject(){
-  // let projectName,projectDescription,projectStatus,startDate,endDate,clientCompany,estimateBudget,estimateHours,totalHours,totalBudget;
-  // projectName=document.getElementById("inputName").value;
-  // projectDescription=document.getElementById("inputDescription").value;
-  // projectStatus=document.getElementById("inputStatus").value;
-  // startDate=document.getElementById("projectStartDate").value;
-  // endDate=document.getElementById("projectEndDate").value;
-  // clientCompany=document.getElementById("inputClientCompany").value;
-  // estimateBudget=document.getElementById("inputEstimatedBudget").value;
-  // estimateHours=document.getElementById("inputEstimatedHours").value;
-  // // totalHours=document.getElementById("projectEndDate").value;
-  // // totalBudget=document.getElementById("projectEndDate").value;
+   let projectName,projectDescription,projectStatus,startDate,endDate,clientCompany,estimateBudget,estimateHours,totalHours,totalBudget;
+   projectName=document.getElementById("inputName").value;
+   projectDescription=document.getElementById("inputDescription").value;
+   projectStatus=document.getElementById("inputStatus").value;
+   startDate=document.getElementById("projectStartDate").value;
+   endDate=document.getElementById("projectEndDate").value;
+   clientCompany=document.getElementById("inputClientCompany").value;
+   estimateBudget=document.getElementById("inputEstimatedBudget").value;
+   estimateHours=document.getElementById("inputEstimatedHours").value;
+   totalHours=document.getElementById("projectEndDate").value;
+   totalBudget=document.getElementById("projectEndDate").value;
 
   // var project1 = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours);
   // //var project1String = project1;
   // //getProjrcts();
   // //getProjrcts();
 
-  var project = {
+  /* var project = {
     projectName: document.getElementById("inputName").value,
     projectDescription: document.getElementById("inputDescription").value,
     projectStatus: document.getElementById("inputStatus").value,
@@ -60,9 +60,11 @@ function addProject(){
     estimateBudget: document.getElementById("inputEstimatedBudget").value,
     estimateHours:document.getElementById("inputEstimatedHours").value,
    
-};
+}; */
+
+var project1 = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours);
 
 
-  createProject(project);
+  createProject(project1);
 }
 
