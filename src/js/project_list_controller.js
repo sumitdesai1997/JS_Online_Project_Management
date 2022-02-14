@@ -5,14 +5,15 @@
     { projectname : "Pink chillies", date : "11/06/2022", completion :  "95% complete", status : "Success" },
 ] */
 
+var currentIndex = 0;
 
 getProjects().forEach(function callback(project, index) {
-    console.log(project.projectName+"---"+project.projectDescription)
-    index++
-  
-    let markup = "<tr><td> " + index + "</td><td><a>"+ project.projectName +"</a><br/><small>" + project.startDate + "</small></td><td><ul class='list-inline'><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar.png'></li><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar2.png'></li><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar3.png'></li><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar4.png'></li><li class='list-inline-item'><button id='btnAddMember"+index+"' type='button' class='btn' data-toggle='modal' data-target='#modal-success'><img alt='Avatar' class='table-avatar' src='../../dist/img/plus.png'></button></li></ul></td><td class='project_progress'><div class='progress progress-sm'><div class='progress-bar bg-green' role='progressbar' aria-valuenow='57' aria-valuemin='0' aria-valuemax='100' style='width: 57%'></div></div><small> " + project.estimateHours + "</small></td><td class='project-state'><span class='badge badge-success'> " + project.projectStatus + " </span></td><td class='project-actions text-right'><a class='btn btn-info btn-sm' href='./project-edit.html'><i class='fas fa-pencil-alt'></i>Edit</a></td></tr>";
+    console.log(project.projectName+"---"+project.projectDescription);
+    
+    let markup = "<tr><td> " + index + "</td><td><a>"+ project.projectName +"</a><br/><small>" + project.startDate + "</small></td><td><ul class='list-inline'><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar.png'></li><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar2.png'></li><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar3.png'></li><li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar4.png'></li><li class='list-inline-item'><button id='btnAddMember"+index+"' type='button' class='btn' data-toggle='modal' data-target='#modal-success'><img alt='Avatar' class='table-avatar' src='../../dist/img/plus.png'></button></li></ul></td><td class='project_progress'><div class='progress progress-sm'><div class='progress-bar bg-green' role='progressbar' aria-valuenow='57' aria-valuemin='0' aria-valuemax='100' style='width: 57%'></div></div><small> " + project.estimateHours + "</small></td><td class='project-state'><span class='badge badge-success'> " + project.projectStatus + " </span></td><td class='project-actions text-right'><button class='btn btn-info btn-sm' onclick='goToEditProject("+index+")'><i class='fas fa-pencil-alt'></i>Edit</a></td></tr>";
     $("table tbody").append(markup);
     
+    index++;
   });
 
 /* for(let i = 0; i < projectList.length; i++){
@@ -20,12 +21,14 @@ getProjects().forEach(function callback(project, index) {
     $("table tbody").append(markup);
 }
  */
-for(let j = 1; j <= getProjects().length; j++){
+for(let j = 0; j < getProjects().length; j++){
     $("#btnAddMember"+j).click(function() {
         $('#modal-newMember').modal('show');
      });
 }
 
-
-
- 
+function goToEditProject(index){
+    console.log("index: "+ index);
+    currentIndex = index;
+    window.location.href = "./project-edit.html";
+}

@@ -61,3 +61,21 @@ function addTask(){
 
   addTaskIntoDB(task);
 }
+
+getProjects().forEach(function callback(project, index) {
+  console.log(project.projectName+"---"+project.projectDescription);
+  console.log("currentIndex: " + currentIndex);
+
+  if(index == currentIndex){
+    document.getElementById("editInputName").value = project.projectName;
+    document.getElementById("editInputDescription").value = project.projectDescription;
+    document.getElementById("editInputStatus").value = project.status;
+    document.getElementById("editprojectStartDate").value = project.startDate;
+    document.getElementById("editprojectEndDate").value = project.endDate;
+    document.getElementById("editInputEstimatedBudget").value = project.estimateTaskBudget;
+    document.getElementById("editInputEstimatedHours").value = project.estimateTaskHours;
+  }
+
+  index++;
+});
+
