@@ -20,8 +20,8 @@ IdProjectStartDate.setAttribute("min", today);
 function setMinForProjectEndDate(){
     IdProjectEndDate.setAttribute("min", IdProjectStartDate.value);
 }
-console.log("currentRole :: "+ getCurrentRole())
-console.log("currentUser :: "+ getCurrentUserId())
+//console.log("currentRole :: "+ getCurrentRole())
+//console.log("currentUser :: "+ getCurrentUserId())
 class Project {
   constructor(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours) {
     this.projectName = projectName;
@@ -32,7 +32,7 @@ class Project {
     this.clientCompany = clientCompany;
     this.estimateBudget = estimateBudget;
     this.estimateHours = estimateHours;
-    this.projectManager= getCurrentUserId()
+    //this.projectManager= getCurrentUserId()
   }
 }
 function addProject(){

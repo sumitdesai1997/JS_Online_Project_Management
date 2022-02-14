@@ -3,7 +3,7 @@
     $('#modal-newMember').modal('show')
  });
 
-console.log("currentUser"+ getCurrentUserId())
+//console.log("currentUser"+ getCurrentUserId())
 
 getProjects().forEach(function callback(project, index) {
   console.log(project.projectName+"---"+project.projectDescription)

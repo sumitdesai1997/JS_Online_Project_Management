@@ -31,12 +31,12 @@ function setCurrentUser(user) {
 function getCurrentUser(){
   return JSON.parse(localStorage.getItem(CURRENT_USER)|| "");
 }
-function getCurrentRole(){
+/* function getCurrentRole(){
   return JSON.parse(localStorage.getItem(CURRENT_USER)|| "").role;
 }
 function getCurrentUserId(){
   return JSON.parse(localStorage.getItem(CURRENT_USER)|| "").email;
-}
+} */
 
 
 var getProjects = () => {
