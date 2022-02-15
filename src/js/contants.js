@@ -1,1 +1,7 @@
- let NAME= "name"
+let USERS= "users"
+let MANAGERS="managers"
+let MEMBERS="members"
+let PROJECTS="projects"
+let TASKS="tasks"
+let CURRENT_USER= "currentuser"
+let CURRENT_PROJECT_INDEX = "currentProjectIndex"

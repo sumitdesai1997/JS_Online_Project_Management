@@ -65,7 +65,7 @@ function addTask(){
 getProjects().forEach(function callback(project, index) {
   console.log(project.projectName+"---"+project.projectDescription);
   console.log("currentIndex: " + currentIndex);
-  currentIndex = localStorage.getItem("currentProjectIndex", JSON.parse(currentIndex));
+  currentIndex = localStorage.getItem(CURRENT_PROJECT_INDEX, JSON.parse(currentIndex));
 
   if(index == currentIndex){
     document.getElementById("editInputName").value = project.projectName;
