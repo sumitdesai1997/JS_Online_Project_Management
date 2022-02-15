@@ -7,8 +7,8 @@ var user = {
     name: "manager",
     email: "manager@yopmail.com",
     password: 12345,
-    role:"manager"
-   
+    role:"manager",
+    subrole: "manager"
 };
 users.push(user)
 
@@ -17,11 +17,48 @@ var user = {
     name: "member",
     email: "member@yopmail.com",
     password: 12345,
-    role:"member"
-   
+    role:"member",
+    subrole: "manager"
 };
 
-users.push(user)
+var user1 = {
+    name: "dinamol",
+    email: "dinamol@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Front end developer"
+};
+
+var user2 = {
+    name: "ranjana",
+    email: "ranjana@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Back end developer"
+};
+
+var user3 = {
+    name: "mihin",
+    email: "mihin@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Full stack developer"
+};
+
+var user4 = {
+    name: "sumit",
+    email: "sumit@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Full stack developer"
+};
+
+users.push(user);
+users.push(user1);
+users.push(user2);
+users.push(user3);
+users.push(user4);
+
 addUsers(users)
 //addMembers(members)
 

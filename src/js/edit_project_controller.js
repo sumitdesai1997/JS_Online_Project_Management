@@ -87,7 +87,7 @@ function saveChanges(){
   
     if(index == currentIndex){
       let newProjectList = getProjects();
-      newProjectList.splice(index, 1);
+      let projectToBeRemoved = newProjectList.splice(index, 1);
       
       let projectName = document.getElementById("editInputName").value;
       let projectDescription = document.getElementById("editInputDescription").value;
@@ -97,8 +97,9 @@ function saveChanges(){
       let clientCompany = document.getElementById("editIputClientCompany").value;
       let estimateBudget = document.getElementById("editInputEstimatedBudget").value;
       let estimateHours = document.getElementById("editInputEstimatedHours").value;
+      let projectMembers = projectToBeRemoved.projectMembers;
 
-      var editedProject = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours);
+      var editedProject = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers);
       newProjectList.push(editedProject);
       
       localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
