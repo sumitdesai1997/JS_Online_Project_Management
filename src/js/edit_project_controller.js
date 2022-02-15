@@ -106,6 +106,8 @@ function saveChanges(){
       var x = document.getElementById("toastEditProject");
       x.className = "show";
       setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+      setTimeout(function(){window.location.href="../../index.html";}, 3500);
     }
   
     index++;
