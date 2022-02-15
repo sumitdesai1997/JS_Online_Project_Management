@@ -23,6 +23,7 @@ getProjects().forEach(function callback(project, index) {
  */
 for(let j = 0; j < getProjects().length; j++){
     $("#btnAddMember"+j).click(function() {
+        currentIndex = j;
         $('#modal-newMember').modal('show');
      });
 }
@@ -45,14 +46,35 @@ var usersBySubrole = {
 function onChangeOfRole(value){
     if(value != undefined){
         if (value.length == 0){
-             document.getElementById("addMemberEmail").innerHTML = "<option></option>";
+             document.getElementById("selecteMemberEmail").innerHTML = "<option></option>";
         } else {
             var memberOptions = "";
             for (userId in usersBySubrole[value]) {
                 memberOptions += "<option>" + usersBySubrole[value][userId].email + "</option>";
             }
-            document.getElementById("addMemberEmail").innerHTML = memberOptions;
+            document.getElementById("selecteMemberEmail").innerHTML = memberOptions;
         }
     }
 }
 onChangeOfRole();
+
+function addMemberToProject(){
+    let memberRole = document.getElementById("selecteRoleOfMember").value;
+    let memberEmail = document.getElementById("selecteMemberEmail").value;
+
+    if(memberRole == undefined || memberRole == "Select the role of member" || memberEmail == undefined || memberEmail == ""){
+        alert("Select member first");
+    } else{
+        let newProjectList = getProjects();
+        let projectToBeRemoved = newProjectList.splice(currentIndex, 1)[0];
+
+        projectToBeRemoved.projectMembers.push(memberEmail);
+
+        var editedProject = new Project(projectToBeRemoved.projectName, projectToBeRemoved.projectDescription, projectToBeRemoved.projectStatus, projectToBeRemoved.startDate, projectToBeRemoved.endDate, projectToBeRemoved.clientCompany, projectToBeRemoved.estimateBudget, projectToBeRemoved.estimateHours, projectToBeRemoved.projectMembers);
+        newProjectList.push(editedProject);
+
+        localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
+
+        window.location.href=window.location.href;
+    }
+}

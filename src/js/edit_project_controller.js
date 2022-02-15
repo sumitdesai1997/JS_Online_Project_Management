@@ -87,7 +87,7 @@ function saveChanges(){
   
     if(index == currentIndex){
       let newProjectList = getProjects();
-      let projectToBeRemoved = newProjectList.splice(index, 1);
+      let projectToBeRemoved = newProjectList.splice(index, 1)[0];
       
       let projectName = document.getElementById("editInputName").value;
       let projectDescription = document.getElementById("editInputDescription").value;
