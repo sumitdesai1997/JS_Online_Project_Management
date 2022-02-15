@@ -65,5 +65,9 @@ function resetForm(){
   document.getElementById("inputClientCompany").value = "" ;
   document.getElementById("inputEstimatedBudget").value = "";
   document.getElementById("inputEstimatedHours").value = "";
+
+  var x = document.getElementById("toastCreateProject");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
