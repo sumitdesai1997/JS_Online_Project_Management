@@ -6,7 +6,6 @@ var getUsers = () => {
 // }
 
 function addUsers(users) {
-  if(getUsers().length==0)
     localStorage.setItem(USERS, JSON.stringify(users));
 };
 

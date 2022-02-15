@@ -53,11 +53,83 @@ var user4 = {
     subrole: "Full stack developer"
 };
 
+var user5 = {
+    name: "Yash",
+    email: "yash@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Full stack developer"
+};
+
+var user6 = {
+    name: "Dhruv",
+    email: "dhruv@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Back end developer"
+};
+
+var user7 = {
+    name: "Ravi",
+    email: "ravi@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Full stack developer"
+};
+
+var user8 = {
+    name: "Kevin",
+    email: "kevin@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Front end developer"
+};
+
+var user9 = {
+    name: "Virat",
+    email: "virat@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Back end developer"
+};
+
+var user10 = {
+    name: "Rohit",
+    email: "rohit@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Business Analyst"
+};
+
+var user11 = {
+    name: "Ishant",
+    email: "ishant@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Business Analyst"
+};
+
+var user12 = {
+    name: "Vikas",
+    email: "vikas@yopmail.com",
+    password: 12345,
+    role:"member",
+    subrole: "Front end developer"
+};
+
 users.push(user);
 users.push(user1);
 users.push(user2);
 users.push(user3);
 users.push(user4);
+users.push(user5);
+users.push(user6);
+users.push(user7);
+users.push(user8);
+users.push(user9);
+users.push(user10);
+users.push(user11);
+users.push(user12);
 
 addUsers(users)
 //addMembers(members)

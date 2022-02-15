@@ -33,3 +33,26 @@ function goToEditProject(index){
     localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(currentIndex));
     window.location.href = "./project-edit.html";
 }
+
+var userList = JSON.parse(localStorage.getItem(USERS));
+var usersBySubrole = {
+    "Business Analyst": userList.filter(user => user.subrole == "Business Analyst"),
+    "Front end developer": userList.filter(user => user.subrole == "Front end developer"),
+    "Back end developer": userList.filter(user => user.subrole == "Back end developer"),
+    "Full stack developer": userList.filter(user => user.subrole == "Full stack developer"),
+}
+
+function onChangeOfRole(value){
+    if(value != undefined){
+        if (value.length == 0){
+             document.getElementById("addMemberEmail").innerHTML = "<option></option>";
+        } else {
+            var memberOptions = "";
+            for (userId in usersBySubrole[value]) {
+                memberOptions += "<option>" + usersBySubrole[value][userId].email + "</option>";
+            }
+            document.getElementById("addMemberEmail").innerHTML = memberOptions;
+        }
+    }
+}
+onChangeOfRole();
