@@ -35,11 +35,12 @@ var getProjects = () => {
 }
 
 
-function createProject(project){
+function createProject(project, callback){
   var projectList=getProjects()
     projectList.push(project);
     localStorage.setItem(PROJECTS, JSON.stringify(projectList));
   
+    callback();
 };
 
 var getTasks = () => {

@@ -20,21 +20,7 @@ IdProjectStartDate.setAttribute("min", today);
 function setMinForProjectEndDate(){
     IdProjectEndDate.setAttribute("min", IdProjectStartDate.value);
 }
-//console.log("currentRole :: "+ getCurrentRole())
-//console.log("currentUser :: "+ getCurrentUserId())
-class Project {
-  constructor(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours) {
-    this.projectName = projectName;
-    this.projectDescription = projectDescription;
-    this.projectStatus = projectStatus;
-    this.startDate = startDate;
-    this.endDate = endDate;
-    this.clientCompany = clientCompany;
-    this.estimateBudget = estimateBudget;
-    this.estimateHours = estimateHours;
-    //this.projectManager= getCurrentUserId()
-  }
-}
+
 function addProject(){
    let projectName,projectDescription,projectStatus,startDate,endDate,clientCompany,estimateBudget,estimateHours,totalHours,totalBudget;
    projectName=document.getElementById("inputName").value;
@@ -47,11 +33,6 @@ function addProject(){
    estimateHours=document.getElementById("inputEstimatedHours").value;
    totalHours=document.getElementById("projectEndDate").value;
    totalBudget=document.getElementById("projectEndDate").value;
-
-  // var project1 = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours);
-  // //var project1String = project1;
-  // //getProjrcts();
-  // //getProjrcts();
 
   /* var project = {
     projectName: document.getElementById("inputName").value,
@@ -68,6 +49,21 @@ function addProject(){
 var project1 = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours);
 
 
-  createProject(project1);
+  //createProject(project1);
+
+  createProject(project1, function() {
+    resetForm();
+  });
+}
+
+function resetForm(){
+  document.getElementById("inputName").value = "";
+  document.getElementById("inputDescription").value = "";
+  document.getElementById("inputStatus").value = "Select one";
+  document.getElementById("projectStartDate").value = "";
+  document.getElementById("projectEndDate").value = "" ;
+  document.getElementById("inputClientCompany").value = "" ;
+  document.getElementById("inputEstimatedBudget").value = "";
+  document.getElementById("inputEstimatedHours").value = "";
 }
 

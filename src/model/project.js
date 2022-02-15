@@ -1,5 +1,5 @@
 
-class Project {
+ class Project {
     constructor(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours) {
       this.projectName = projectName;
       this.projectDescription = projectDescription;
