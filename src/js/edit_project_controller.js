@@ -81,3 +81,34 @@ getProjects().forEach(function callback(project, index) {
   index++;
 });
 
+function saveChanges(){
+  getProjects().forEach(function callback(project, index) {
+    currentIndex = localStorage.getItem(CURRENT_PROJECT_INDEX, JSON.parse(currentIndex));
+  
+    if(index == currentIndex){
+      let newProjectList = getProjects();
+      newProjectList.splice(index, 1);
+      
+      let projectName = document.getElementById("editInputName").value;
+      let projectDescription = document.getElementById("editInputDescription").value;
+      let projectStatus = document.getElementById("editInputStatus").value;
+      let startDate = document.getElementById("editprojectStartDate").value;
+      let endDate = document.getElementById("editprojectEndDate").value;
+      let clientCompany = document.getElementById("editIputClientCompany").value;
+      let estimateBudget = document.getElementById("editInputEstimatedBudget").value;
+      let estimateHours = document.getElementById("editInputEstimatedHours").value;
+
+      var editedProject = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours);
+      newProjectList.push(editedProject);
+      
+      localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
+
+      var x = document.getElementById("toastEditProject");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+  
+    index++;
+  });
+}
+

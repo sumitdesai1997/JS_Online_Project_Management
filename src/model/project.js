@@ -9,6 +9,7 @@
       this.clientCompany = clientCompany;
       this.estimateBudget = estimateBudget;
       this.estimateHours = estimateHours;
+      this.projectManager = getCurrentUser().email;
     }
   }
 

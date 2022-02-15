@@ -11,6 +11,49 @@
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <style>
+    #toastEditProject {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 17px;
+    }
+
+    #toastEditProject.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+      from {bottom: 0; opacity: 0;} 
+      to {bottom: 30px; opacity: 1;}
+    }
+
+    @keyframes fadein {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 30px; opacity: 1;}
+    }
+
+    @-webkit-keyframes fadeout {
+      from {bottom: 30px; opacity: 1;} 
+      to {bottom: 0; opacity: 0;}
+    }
+
+    @keyframes fadeout {
+      from {bottom: 30px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }   
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -432,7 +475,7 @@
         <div class="col-12" style="min-height: 60px;">
           <!-- <a href="#" class="btn btn-secondary">Cancel</a> -->
           <input id = "btnAddNewTask" type="button" value="Add new task" class="btn btn-primary">
-          <input type="submit" value="Save Changes" class="btn btn-success float-right">
+          <input type="submit" value="Save Changes" class="btn btn-success float-right" onclick="saveChanges()">
         </div>
       </div>
 
@@ -548,7 +591,7 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal -->
-
+      <div id="toastEditProject">Project edited successfully!!</div>
     </section>
     <!-- /.content -->
   </div>
@@ -578,6 +621,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 
+<script type="text/javascript" src="../../src/model/project.js"></script>
 <script type="text/javascript" src="../../src/js/contants.js"></script>
 <script type="text/javascript" src="../../src/js/db.controller.js"></script>
 <script type="text/javascript" src="../../src/js/project_list_controller.js"></script>
