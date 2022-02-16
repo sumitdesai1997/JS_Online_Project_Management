@@ -3,34 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manager Dashboard</title>
+  <title>About me</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
-
   
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+   <!-- Navbar -->
+   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="./index.html" class="nav-link">Home</a>
+        <a href="../../index3.html" class="nav-link">Home</a>
       </li>
       <!-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -152,12 +145,12 @@
         </a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link"  href="./src/html/manager_profile.html" role="button">
-          <img alt="Avatar" width="35" height="35" class="table-avatar" src="./dist/img/avatar.png">
+        <a class="nav-link"  href="./manager_profile.html" role="button">
+          <img alt="Avatar" width="35" height="35" class="table-avatar" src="../../dist/img/avatar.png">
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="./src/html/login.html" role="button">
+        <a class="nav-link"  href="./login.html" role="button">
           Sign out
         </a>
       </li>
@@ -167,14 +160,13 @@
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-   
-
+    
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div><span></span><span></span><span></span><span></span>
         <div class="info">
           <a href="#" class="d-block">Cathy Wan</a>
@@ -186,7 +178,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="../../index.html" class="nav-link">
               <!-- <i class="nav-icon far fa-image"></i> -->
               <i class="fas fa-home"></i>&nbsp;
               <p>
@@ -195,7 +187,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./src/html/addProject.html" class="nav-link">
+            <a href="./addProject.html" class="nav-link">
               <!-- <i class="nav-icon far fa-image"></i> -->
               <i class="fas fa-plus"></i>&nbsp;
               <p>
@@ -204,7 +196,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./src/html/project.html" class="nav-link">
+            <a href="./project.html" class="nav-link">
               <!-- <i class="nav-icon fas fa-columns"></i> -->
               <i class="fas fa-project-diagram"></i>&nbsp;
               <p>
@@ -213,7 +205,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./src/html/manager_profile.html" class="nav-link">
+            <a href="./manager_profile.html" class="nav-link">
               <!-- <i class="nav-icon fas fa-columns"></i> -->
               <i class="fas fa-user"></i>&nbsp;
               <p>
@@ -222,7 +214,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./src/html/login.html" class="nav-link">
+            <a href="./login.html" class="nav-link">
               <!-- <i class="nav-icon fas fa-columns"></i> -->
               <i class="fas fa-sign-out-alt"></i>&nbsp;
               <p>
@@ -241,190 +233,166 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
+    <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
-          </div><!-- /.col -->
+            <h1>Profile</h1>
+          </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
+              <li class="breadcrumb-item active">About Me</li>
             </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
+          </div>
+        </div>
       </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+    </section>
 
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>&nbsp;&nbsp;</h3>
+          <div class="col-md-3">
 
-                <h5>Create Project</h5>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="./src/html/addProject.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>&nbsp;&nbsp;</h3>
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle"
+                       src="../../dist/img/avatar.png"
+                       alt="User profile picture">
+                </div>
 
-                <h5>Projects</h5>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="./src/html/project.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>&nbsp;&nbsp;</h3>
+                <h3 class="profile-username text-center">Cathy Wan</h3>
 
-                <h5>Add members</h5>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a id="hrefAddMember" class="small-box-footer" >More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>&nbsp;&nbsp;</h3>
+                <p class="text-muted text-center">Android Application developer</p>
 
-                <h5>Edit Project</h5>
+                <ul class="list-group list-group-unbordered mb-3">
+                  <!-- <li class="list-group-item">
+                    <b>Joined</b> <a class="float-right">09.02.2022</a>
+                  </li> -->
+                  <li class="list-group-item">
+                    <b>Projects</b> <a class="float-right">2</a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Tasks</b> <a class="float-right">7</a>
+                  </li>
+                </ul>
+
+                <!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
               </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a id="hrefEditProject" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <!-- /.card-body -->
             </div>
+            <!-- /.card -->
+
+            <!-- /.card -->
           </div>
-          <!-- ./col -->
+          <!-- /.col -->
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header p-2">
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#aboutMe" data-toggle="tab">About me</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
+                </ul>
+              </div><!-- /.card-header -->
+
+              <div class="card-body">
+                <div class="tab-content">
+
+                  <!-- About Me Box -->
+                    <div class="active tab-pane" id="aboutMe">
+                      <strong><i class="fas fa-book mr-1"></i> Education</strong>
+
+                      <p class="text-muted">
+                        MCA from Punjab Technical University
+                      </p>
+
+                      <hr>
+
+                      <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+
+                      <p class="text-muted">Toronto, Canada</p>
+
+                      <hr>
+
+                      <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
+
+                      <p class="text-muted">
+                        <span class="tag tag-danger">Android, </span>
+                        <span class="tag tag-success">Java, </span>
+                        <span class="tag tag-info">Kotlin, </span>
+                        <span class="tag tag-warning">Javascript, </span>
+                        <span class="tag tag-primary">Programming</span>
+                      </p>
+
+                      <hr>
+
+                      <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+
+                      <p class="text-muted">Even after Workaholic and Laziness are opposite, I'm both type of person.</p>
+                    </div>
+
+                    <div class="tab-pane" id="settings">
+                      <form class="form-horizontal">
+                        <div class="form-group row">
+                          <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputName" placeholder="Name">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputName2" class="col-sm-2 col-form-label">Hourly Rate</label>
+                          <div class="col-sm-10">
+                            <input type="number" class="form-control" id="inputName2" placeholder="Hourly Rate">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
+                          <div class="col-sm-10">
+                            <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="offset-sm-2 col-sm-10">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  <!-- /.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
-
-      <div class="modal fade" id="modal-newMemberWithProject">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Add new member</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="card-body">
-
-                <div class="form-group">
-                  <label>Project name</label>
-                  <select id="selectProject" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                    <option selected="selected" disabled>Select Project</option>
-                  </select>
-                </div>
-                
-                <div class="form-group">
-                  <label>Role of Member</label>
-                  <select id="selectRole" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" onchange="onChangeOfRole(this.value)">
-                    <option selected disabled>Select Role</option>
-                    <option value="Business Analyst">Business Analyst</option>
-                    <option value="Front end developer">Front end developer</option>
-                    <option value="Back end developer">Back end developer</option>
-                    <option value="Full stack developer">Full stack developer</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label>Email</label>
-                  <select id="selectMember" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                    <option selected="selected" disabled>Select Member</option>
-                  </select>
-                </div>
-
-              </div>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <!-- <button type="button" data-dismiss="modal">Close</button>
-              <button type="button">Save changes</button> -->
-
-              <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
-                Close
-              </button>
-
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success" onclick="addMemberToProject()">
-                Save
-              </button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
-      <div class="modal fade" id="modal-editProject">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Project</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="card-body">
-
-                <div class="form-group">
-                  <label>Project name</label>
-                  <select id="selectEditProject" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                    <option selected="selected" disabled>Select Project</option>
-                  </select>
-                </div>
-
-              </div>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <!-- <button type="button" data-dismiss="modal">Close</button>
-              <button type="button">Save changes</button> -->
-
-              <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
-                Close
-              </button>
-
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success" onclick="goToEditProject()">
-                Edit Project
-              </button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-
     </section>
     <!-- /.content -->
   </div>
@@ -445,24 +413,13 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
+<script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="src/js/db.controller.js"></script>
-
-<script type="text/javascript" src="src/model/project.js"></script>
-<script type="text/javascript" src="src/model/task.js"></script>
-<script type="text/javascript" src="src/js/contants.js"></script>
-<script type="text/javascript" src="src/js/db.controller.js"></script>
-<script type="text/javascript" src="src/js/index.js"></script>
+<script src="../../dist/js/demo.js"></script>
+<script src="../js/manager_profile.js"></script>
 </body>
 </html>
