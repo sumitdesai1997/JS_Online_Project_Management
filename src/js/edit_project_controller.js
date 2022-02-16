@@ -48,11 +48,21 @@ function addTask(){
   let taskEstimateBudget = document.getElementById("inputTaskCost").value;
 
   let isTaskIndependent = document.getElementById("taskdependant1").checked ? "Yes" : "No";
-  let dependentTask = document.getElementById("dependentTask").value;
+  let dependentTask = isTaskIndependent == "No" ? document.getElementById("dependentTask").value : "";
   
   var task = new Task(taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask);
 
-  addTaskIntoDB(task);
+  let newProjectList = getProjects();
+  let projectToBeRemoved = newProjectList.splice(currentIndex, 1)[0];
+
+  projectToBeRemoved.taskList.push(task);
+
+  var editedProject = new Project(projectToBeRemoved.projectName, projectToBeRemoved.projectDescription, projectToBeRemoved.projectStatus, projectToBeRemoved.startDate, projectToBeRemoved.endDate, projectToBeRemoved.clientCompany, projectToBeRemoved.estimateBudget, projectToBeRemoved.estimateHours, projectToBeRemoved.projectMembers, projectToBeRemoved.imgAvatar, projectToBeRemoved.taskList);
+  newProjectList.push(editedProject);
+
+  localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
+
+  //addTaskIntoDB(task);
 }
 
 getProjects().forEach(function callback(project, index) {
