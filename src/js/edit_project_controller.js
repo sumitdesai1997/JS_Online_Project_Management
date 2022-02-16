@@ -49,6 +49,9 @@ function addTask(){
 
   let isTaskIndependent = document.getElementById("taskdependant1").checked ? "Yes" : "No";
   let dependentTask = isTaskIndependent == "No" ? document.getElementById("dependentTask").value : "";
+ 
+  dependentTask = dependentTask == "No tasks created yet" ? "" : dependentTask;
+  isTaskIndependent = dependentTask == "" ? "Yes" : "No";
   
   var task = new Task(taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask);
 
@@ -61,6 +64,13 @@ function addTask(){
   newProjectList.push(editedProject);
 
   localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
+
+  document.getElementById("addTaskModalClose").click();
+  var x = document.getElementById("toastTaskAdd");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+  setTimeout(function(){window.location.href="../../index.html";}, 3500);
 
   //addTaskIntoDB(task);
 }
@@ -135,3 +145,19 @@ function loadMemberEmails(){
     }
 }
 loadMemberEmails();
+
+function loadTaskList(){
+  let projectList = getProjects();
+  let currentProject = projectList[currentIndex];
+
+    if (currentProject.taskList.length == 0){
+          document.getElementById("dependentTask").innerHTML = "<option disabled selected>No tasks created yet</option>";
+    } else {
+        var taskOptions = "";
+        for (index in currentProject.taskList) {
+            taskOptions += "<option>" + currentProject.taskList[index].taskName + "</option>";
+        }
+        document.getElementById("dependentTask").innerHTML = taskOptions;
+    }
+}
+loadTaskList();
