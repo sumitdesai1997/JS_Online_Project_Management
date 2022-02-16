@@ -34,6 +34,7 @@ function onChangeTaskDependency(){
   }
 }
 
+currentIndex = localStorage.getItem(CURRENT_PROJECT_INDEX, JSON.parse(currentIndex));
 
 function addTask(){
 
@@ -57,7 +58,7 @@ function addTask(){
 getProjects().forEach(function callback(project, index) {
   console.log(project.projectName+"---"+project.projectDescription);
   console.log("currentIndex: " + currentIndex);
-  currentIndex = localStorage.getItem(CURRENT_PROJECT_INDEX, JSON.parse(currentIndex));
+  
 
   if(index == currentIndex){
     document.getElementById("editInputName").value = project.projectName;
@@ -109,3 +110,18 @@ function saveChanges(){
   });
 }
 
+function loadMemberEmails(){
+  let projectList = getProjects();
+  let currentProject = projectList[currentIndex];
+
+    if (currentProject.projectMembers.length == 0){
+          document.getElementById("taskInputMemberEmail").innerHTML = "<option></option>";
+    } else {
+        var memberOptions = "";
+        for (index in currentProject.projectMembers) {
+            memberOptions += "<option>" + currentProject.projectMembers[index] + "</option>";
+        }
+        document.getElementById("taskInputMemberEmail").innerHTML = memberOptions;
+    }
+}
+loadMemberEmails();
