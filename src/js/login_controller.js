@@ -18,7 +18,8 @@ var user = {
     email: "member@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "manager"
+    subrole: "Back end developer",
+    payrate: 20
 };
 
 var user1 = {
@@ -26,7 +27,8 @@ var user1 = {
     email: "dinamol@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Front end developer"
+    subrole: "Front end developer",
+    payrate: 20
 };
 
 var user2 = {
@@ -34,7 +36,8 @@ var user2 = {
     email: "ranjana@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Back end developer"
+    subrole: "Back end developer",
+    payrate: 25
 };
 
 var user3 = {
@@ -42,7 +45,8 @@ var user3 = {
     email: "mihin@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Full stack developer"
+    subrole: "Full stack developer",
+    payrate: 22
 };
 
 var user4 = {
@@ -50,7 +54,8 @@ var user4 = {
     email: "sumit@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Full stack developer"
+    subrole: "Full stack developer",
+    payrate: 24
 };
 
 var user5 = {
@@ -58,7 +63,8 @@ var user5 = {
     email: "yash@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Full stack developer"
+    subrole: "Full stack developer",
+    payrate: 30
 };
 
 var user6 = {
@@ -66,7 +72,8 @@ var user6 = {
     email: "dhruv@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Back end developer"
+    subrole: "Back end developer",
+    payrate: 27
 };
 
 var user7 = {
@@ -74,7 +81,8 @@ var user7 = {
     email: "ravi@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Full stack developer"
+    subrole: "Full stack developer",
+    payrate: 25
 };
 
 var user8 = {
@@ -82,7 +90,8 @@ var user8 = {
     email: "kevin@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Front end developer"
+    subrole: "Front end developer",
+    payrate: 21
 };
 
 var user9 = {
@@ -90,7 +99,8 @@ var user9 = {
     email: "virat@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Back end developer"
+    subrole: "Back end developer",
+    payrate: 30
 };
 
 var user10 = {
@@ -98,7 +108,8 @@ var user10 = {
     email: "rohit@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Business Analyst"
+    subrole: "Business Analyst",
+    payrate: 18
 };
 
 var user11 = {
@@ -106,7 +117,8 @@ var user11 = {
     email: "ishant@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Business Analyst"
+    subrole: "Business Analyst",
+    payrate: 16
 };
 
 var user12 = {
@@ -114,7 +126,8 @@ var user12 = {
     email: "vikas@yopmail.com",
     password: 12345,
     role:"member",
-    subrole: "Front end developer"
+    subrole: "Front end developer",
+    payrate: 25
 };
 
 users.push(user);

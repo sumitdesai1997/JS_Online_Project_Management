@@ -35,23 +35,26 @@ function onChangeTaskDependency(){
 }
 
 currentIndex = localStorage.getItem(CURRENT_PROJECT_INDEX, JSON.parse(currentIndex));
+var userList = JSON.parse(localStorage.getItem(USERS));
 
 function addTask(){
 
   let taskName = document.getElementById("taskInputName").value;
   let taskDescription = document.getElementById("taskInputDescription").value;
-  let taskStatus = document.getElementById("taskInputStatus").value;
+  //let taskStatus = document.getElementById("taskInputStatus").value;
+  let taskStatus = "Created";
   let startDate = document.getElementById("taskStartDate").value;
   let endDate = document.getElementById("taskEndDate").value;
   let taskMemberEmail = document.getElementById("taskInputMemberEmail").value;
   let taskEstimateHours = document.getElementById("inputTaskHours").value;
-  let taskEstimateBudget = document.getElementById("inputTaskCost").value;
-
+  //let taskEstimateBudget = document.getElementById("inputTaskCost").value;
   let isTaskIndependent = document.getElementById("taskdependant1").checked ? "Yes" : "No";
   let dependentTask = isTaskIndependent == "No" ? document.getElementById("dependentTask").value : "";
  
   dependentTask = dependentTask == "No tasks created yet" ? "" : dependentTask;
   isTaskIndependent = dependentTask == "" ? "Yes" : "No";
+
+  let taskEstimateBudget = userList.filter(user => user.email == taskMemberEmail)[0].payrate * parseInt(taskEstimateHours);
   
   var task = new Task(taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask);
 
