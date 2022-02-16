@@ -91,8 +91,9 @@ function saveChanges(){
       let estimateHours = document.getElementById("editInputEstimatedHours").value;
       let projectMembers = projectToBeRemoved.projectMembers;
       let imgAvatar = projectToBeRemoved.imgAvatar;
+      let taskList = projectToBeRemoved.taskList;
 
-      var editedProject = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar);
+      var editedProject = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
       newProjectList.push(editedProject);
       
       localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));

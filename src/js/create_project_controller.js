@@ -35,6 +35,7 @@ function addProject(){
    totalBudget=document.getElementById("projectEndDate").value;
    let projectMembers = [];
    let imgAvatar = "";
+   let taskList = [];
   /* var project = {
     projectName: document.getElementById("inputName").value,
     projectDescription: document.getElementById("inputDescription").value,
@@ -47,7 +48,7 @@ function addProject(){
    
 }; */
 
-var project1 = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar);
+var project1 = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
 
 
   //createProject(project1);

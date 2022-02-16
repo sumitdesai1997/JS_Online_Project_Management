@@ -1,6 +1,6 @@
 
  class Project {
-    constructor(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar) {
+    constructor(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList) {
       this.projectName = projectName;
       this.projectDescription = projectDescription;
       this.projectStatus = projectStatus;
@@ -12,6 +12,7 @@
       this.projectManager = getCurrentUser().email;
       this.projectMembers = projectMembers;
       this.imgAvatar = imgAvatar;
+      this.taskList = taskList;
     }
   }
 
