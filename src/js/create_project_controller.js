@@ -36,6 +36,7 @@ function addProject(){
    let projectMembers = [];
    let imgAvatar = "";
    let taskList = [];
+   let projectId = "PRJCT" + Math.floor(100000 + Math.random() * 900000);
   /* var project = {
     projectName: document.getElementById("inputName").value,
     projectDescription: document.getElementById("inputDescription").value,
@@ -48,7 +49,7 @@ function addProject(){
    
 }; */
 
-var project1 = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
+var project1 = new Project(projectId, projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
 
 
   //createProject(project1);

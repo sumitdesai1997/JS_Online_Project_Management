@@ -63,7 +63,7 @@ function addTask(){
 
   projectToBeRemoved.taskList.push(task);
 
-  var editedProject = new Project(projectToBeRemoved.projectName, projectToBeRemoved.projectDescription, projectToBeRemoved.projectStatus, projectToBeRemoved.startDate, projectToBeRemoved.endDate, projectToBeRemoved.clientCompany, projectToBeRemoved.estimateBudget, projectToBeRemoved.estimateHours, projectToBeRemoved.projectMembers, projectToBeRemoved.imgAvatar, projectToBeRemoved.taskList);
+  var editedProject = new Project(projectToBeRemoved.projectId, projectToBeRemoved.projectName, projectToBeRemoved.projectDescription, projectToBeRemoved.projectStatus, projectToBeRemoved.startDate, projectToBeRemoved.endDate, projectToBeRemoved.clientCompany, projectToBeRemoved.estimateBudget, projectToBeRemoved.estimateHours, projectToBeRemoved.projectMembers, projectToBeRemoved.imgAvatar, projectToBeRemoved.taskList);
   newProjectList.push(editedProject);
 
   localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
@@ -116,8 +116,9 @@ function saveChanges(){
       let projectMembers = projectToBeRemoved.projectMembers;
       let imgAvatar = projectToBeRemoved.imgAvatar;
       let taskList = projectToBeRemoved.taskList;
+      let projectId = projectToBeRemoved.projectId;
 
-      var editedProject = new Project(projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
+      var editedProject = new Project(projectId, projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
       newProjectList.push(editedProject);
       
       localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
