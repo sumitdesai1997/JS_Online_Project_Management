@@ -2,7 +2,11 @@
 
 $('#hrefAddMember').click(function() {
     $('#modal-newMemberWithProject').modal('show');
-   });
+});
+
+$('#hrefEditProject').click(function() {
+    $('#modal-editProject').modal('show');
+});
 
 var userList = JSON.parse(localStorage.getItem(USERS));
 var usersBySubrole = {
@@ -18,12 +22,14 @@ function loadModalData(){
     
     if (projectList.length == 0){
             document.getElementById("selectProject").innerHTML = "<option></option>";
+            document.getElementById("selectEditProject").innerHTML = "<option></option>";
     } else {
         var projectOptions = "";
         for (index in projectList) {
             projectOptions += "<option value='"+projectList[index].projectName+"'>" + projectList[index].projectName + "</option>";
         }
         document.getElementById("selectProject").innerHTML = projectOptions;
+        document.getElementById("selectEditProject").innerHTML = projectOptions;
     }
 }
 loadModalData();
@@ -86,4 +92,18 @@ function addMemberToProject(){
 
         window.location.href=window.location.href;
     }
+}
+
+function goToEditProject(){
+    let newProjectList = getProjects();
+    let selectEditProjectName = document.getElementById("selectEditProject").value;
+
+    for(var i = 0; i < newProjectList.length; i++){
+        if(newProjectList[i].projectName == selectEditProjectName){
+            localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(i));
+            break;
+        }
+    }
+
+    window.location.href = "./src/html/project-edit.html"
 }

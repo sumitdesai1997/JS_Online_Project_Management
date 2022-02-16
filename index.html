@@ -319,7 +319,7 @@
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="./src/html/project-edit.html" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a id="hrefEditProject" href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -376,6 +376,46 @@
 
               <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success" onclick="addMemberToProject()">
                 Save
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-editProject">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Edit Project</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="card-body">
+
+                <div class="form-group">
+                  <label>Project name</label>
+                  <select id="selectEditProject" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                    <option selected="selected" disabled>Select Project</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <!-- <button type="button" data-dismiss="modal">Close</button>
+              <button type="button">Save changes</button> -->
+
+              <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
+                Close
+              </button>
+
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success" onclick="goToEditProject()">
+                Edit Project
               </button>
             </div>
           </div>
