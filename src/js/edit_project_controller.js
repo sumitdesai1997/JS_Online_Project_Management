@@ -39,6 +39,8 @@ var userList = JSON.parse(localStorage.getItem(USERS));
 
 function addTask(){
 
+  let newProjectList = getProjects();
+
   let taskName = document.getElementById("taskInputName").value;
   let taskDescription = document.getElementById("taskInputDescription").value;
   //let taskStatus = document.getElementById("taskInputStatus").value;
@@ -54,11 +56,12 @@ function addTask(){
   dependentTask = dependentTask == "No tasks created yet" ? "" : dependentTask;
   isTaskIndependent = dependentTask == "" ? "Yes" : "No";
 
+  let taskId = "TSK" + + Math.floor(100000 + Math.random() * 900000);
+
   let taskEstimateBudget = userList.filter(user => user.email == taskMemberEmail)[0].payrate * parseInt(taskEstimateHours);
   
-  var task = new Task(taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask);
+  var task = new Task(taskId, taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask, newProjectList[currentIndex].projectId);
 
-  let newProjectList = getProjects();
   let projectToBeRemoved = newProjectList.splice(currentIndex, 1)[0];
 
   projectToBeRemoved.taskList.push(task);
