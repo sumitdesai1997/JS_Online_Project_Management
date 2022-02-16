@@ -264,17 +264,17 @@
             </div>
             <div class="card-body">
               <div class="form-group">
-                <label for="inputName">Task Name</label>
-                <input type="text" id="inputName" class="form-control" value="AdminLTE">
+                <label for="editTaskName">Task Name</label>
+                <input type="text" id="editTaskName" class="form-control">
               </div>
               <div class="form-group">
-                <label for="inputDescription">Task Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+                <label for="editTaskDescription">Task Description</label>
+                <textarea id="editTaskDescription" class="form-control" rows="4"></textarea>
               </div>
 
               <div class="form-group">
-                <label for="inputStatus">Status</label>
-                <select id="inputStatus" class="form-control custom-select">
+                <label for="editTaskStatus">Status</label>
+                <select id="editTaskStatus" class="form-control custom-select">
                   <option selected disabled>Select one</option>
                   <option>Work in progress</option>
                   <option>Success</option>
@@ -286,19 +286,19 @@
               <div class="form-group">
                 <label>Start date</label>
                 <div class="input-group date">
-                  <input id="editprojectStartDate" type="date" class="form-control datetimepicker-input" onblur="setMinForProjectEndDate()">
+                  <input id="editTaskStartDate" type="date" class="form-control datetimepicker-input" onblur="setMinForProjectEndDate()">
                 </div>
               </div>
 
               <div class="form-group">
                 <label>End date</label>
                 <div class="input-group date" >
-                  <input id="editprojectEndDate" type="date" class="form-control datetimepicker-input">
+                  <input id="editTaskEndDate" type="date" class="form-control datetimepicker-input">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputTaskHours">Assigned Task Hours</label>
-                <input type="number" id="inputTaskHours" class="form-control" value="Deveint Inc">
+                <label for="editAssignedTaskHours">Assigned Task Hours</label>
+                <input type="number" id="editAssignedTaskHours" class="form-control" value="Deveint Inc">
               </div>
             </div>
             <!-- /.card-body -->
@@ -488,6 +488,7 @@
 <script src="../../dist/js/demo.js"></script>
 
 <script type="text/javascript" src="../../src/js/contants.js"></script>
-<script type="text/javascript" src="../../src/js/edit_project_controller.js"></script>
+<script type="text/javascript" src="../../src/js/db.controller.js"></script>
+<script type="text/javascript" src="../../src/js/edit_task_controller.js"></script>
 </body>
 </html>

@@ -75,7 +75,7 @@ function addTask(){
 
   setTimeout(function(){window.location.href="../../index.html";}, 3500);
 
-  //addTaskIntoDB(task);
+  addTaskIntoDB(task);
 }
 
 getProjects().forEach(function callback(project, index) {
