@@ -45,13 +45,18 @@ var usersBySubrole = {
 }
 
 function onChangeOfRole(value){
+    
+    let projectList = getProjects();
+    
     if(value != undefined){
         if (value.length == 0){
              document.getElementById("selecteMemberEmail").innerHTML = "<option></option>";
         } else {
             var memberOptions = "";
             for (userId in usersBySubrole[value]) {
-                memberOptions += "<option>" + usersBySubrole[value][userId].email + "</option>";
+                if(!projectList[currentIndex].projectMembers.includes(usersBySubrole[value][userId].email)){
+                    memberOptions += "<option>" + usersBySubrole[value][userId].email + "</option>";
+                }
             }
             document.getElementById("selecteMemberEmail").innerHTML = memberOptions;
         }
