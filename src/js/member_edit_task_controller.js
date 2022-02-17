@@ -45,7 +45,7 @@ function memberEditTask(){
     var userList = JSON.parse(localStorage.getItem(USERS));
     let actualTaskHours = document.getElementById("taskCompletionHours").value;
     let actualTaskBudget = userList.filter(user => user.email == getCurrentUser().email)[0].payrate * parseInt(actualTaskHours);
-    let taskComment = document.getElementById("memberEditTaskStatus").value;
+    let taskComment = document.getElementById("taskComments").value;
 
     var editedTask = new Task(taskToBeRemoved.taskId, taskToBeRemoved.taskName, taskToBeRemoved.taskDescription, taskStatus, taskToBeRemoved.startDate, taskToBeRemoved.endDate, taskToBeRemoved.taskMemberEmail, taskToBeRemoved.taskEstimateBudget, taskToBeRemoved.taskEstimateHours, taskToBeRemoved.isTaskIndependent, taskToBeRemoved.dependentTask, currentProjectId, actualTaskHours, actualTaskBudget, taskComment);
     newTaskList.push(editedTask);
@@ -76,5 +76,5 @@ function memberEditTask(){
     newProjectList.push(projectToBeRemoved);    
     localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
 
-    setTimeout(function(){window.location.href="../../index.html";}, 3500);
+    setTimeout(function(){window.location.href="../../member_dashboard.html";}, 3500);
 }
