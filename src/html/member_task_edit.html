@@ -264,17 +264,17 @@
             </div>
             <div class="card-body">
               <div class="form-group">
-                <label for="editTaskName">Task Name</label>
-                <input type="text" id="editTaskName" class="form-control">
+                <label for="memberEditTaskName">Task Name</label>
+                <input type="text" id="memberEditTaskName" class="form-control" disabled>
               </div>
               <div class="form-group">
-                <label for="editTaskDescription">Task Description</label>
-                <textarea id="editTaskDescription" class="form-control" rows="4"></textarea>
+                <label for="memberEditTaskDescription">Task Description</label>
+                <textarea id="memberEditTaskDescription" class="form-control" rows="4" disabled></textarea>
               </div>
 
               <div class="form-group">
-                <label for="editTaskStatus">Status</label>
-                <select id="editTaskStatus" class="form-control custom-select">
+                <label for="memberEditTaskStatus">Status</label>
+                <select id="memberEditTaskStatus" class="form-control custom-select">
                   <option selected disabled>Select one</option>
                   <option>Work in progress</option>
                   <option>Success</option>
@@ -286,19 +286,19 @@
               <div class="form-group">
                 <label>Start date</label>
                 <div class="input-group date">
-                  <input id="editTaskStartDate" type="date" class="form-control datetimepicker-input" onblur="setMinForProjectEndDate()">
+                  <input id="memberEditTaskStartDate" type="date" class="form-control datetimepicker-input" onblur="setMinForProjectEndDate()" disabled>
                 </div>
               </div>
 
               <div class="form-group">
                 <label>End date</label>
                 <div class="input-group date" >
-                  <input id="editTaskEndDate" type="date" class="form-control datetimepicker-input">
+                  <input id="memberEditTaskEndDate" type="date" class="form-control datetimepicker-input" disabled>
                 </div>
               </div>
               <div class="form-group">
-                <label for="editAssignedTaskHours">Assigned Task Hours</label>
-                <input type="number" id="editAssignedTaskHours" class="form-control" value="Deveint Inc">
+                <label for="memberEditTaskHour">Assigned Task Hours</label>
+                <input type="number" id="memberEditTaskHour" class="form-control" disabled>
               </div>
             </div>
             <!-- /.card-body -->
@@ -319,11 +319,11 @@
             <div class="card-body">
               <div class="form-group">
                 <label for="taskCompletionHours">Task Completion Hours</label>
-                <input type="number" id="taskCompletionHours" class="form-control" value="2300" step="1">
+                <input type="number" id="taskCompletionHours" class="form-control" step="1">
               </div>
               <div class="form-group">
                 <label for="taskComments">Task Comments</label>
-                <textarea id="taskComments" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+                <textarea id="taskComments" class="form-control" rows="4"></textarea>
               </div>
               <!-- <div class="form-group">
                 <label for="inputSpentBudget">Total amount spent</label>
@@ -447,7 +447,7 @@
                 Close
               </button>
 
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success" onclick="memberEditTask()">
                 Save
               </button>
             </div>
@@ -487,8 +487,10 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 
+<script type="text/javascript" src="../../src/model/project.js"></script>
+<script type="text/javascript" src="../../src/model/task.js"></script>
 <script type="text/javascript" src="../../src/js/contants.js"></script>
 <script type="text/javascript" src="../../src/js/db.controller.js"></script>
-<script type="text/javascript" src="../../src/js/edit_task_controller.js"></script>
+<script type="text/javascript" src="../../src/js/member_edit_task_controller.js"></script>
 </body>
 </html>

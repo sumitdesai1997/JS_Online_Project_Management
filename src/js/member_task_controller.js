@@ -18,7 +18,9 @@ for(let i = 0; i < userTaskList.length; i++){
 }
 
 function goToEditTask(index){
+    let currentTaskId = userTaskList[index].taskId;
     console.log("index: "+ index);
-    localStorage.setItem(CURRENT_TASK_INDEX, JSON.stringify(index));
+
+    localStorage.setItem(CURRENT_TASK_ID, JSON.stringify(currentTaskId));
     window.location.href = "./member_task_edit.html";
 }

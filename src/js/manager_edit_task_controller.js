@@ -95,7 +95,7 @@ function managerEditTask(){
     var userList = JSON.parse(localStorage.getItem(USERS));
     let taskEstimateBudget = userList.filter(user => user.email == taskMemberEmail)[0].payrate * parseInt(taskEstimateHours);
 
-    var editedTask = new Task(taskToBeRemoved.taskId, taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask, currentProjectId);
+    var editedTask = new Task(taskToBeRemoved.taskId, taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask, currentProjectId, taskToBeRemoved.actualTaskHours, taskToBeRemoved.actualTaskBudget, taskToBeRemoved.taskComment);
     newTaskList.push(editedTask);
 
     localStorage.setItem(TASKS, JSON.stringify(newTaskList));

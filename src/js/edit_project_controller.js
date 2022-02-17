@@ -59,8 +59,11 @@ function addTask(){
   let taskId = "TSK" + + Math.floor(100000 + Math.random() * 900000);
 
   let taskEstimateBudget = userList.filter(user => user.email == taskMemberEmail)[0].payrate * parseInt(taskEstimateHours);
-  
-  var task = new Task(taskId, taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask, newProjectList[currentIndex].projectId);
+  let actualTaskHours = -1;
+  let actualTaskBudget = -1;
+  let taskComment = ""
+
+  var task = new Task(taskId, taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask, newProjectList[currentIndex].projectId, actualTaskHours, actualTaskBudget, taskComment);
 
   let projectToBeRemoved = newProjectList.splice(currentIndex, 1)[0];
 
