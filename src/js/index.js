@@ -111,6 +111,7 @@ function goToEditProject(){
 
     for(var i = 0; i < newProjectList.length; i++){
         if(newProjectList[i].projectName == selectEditProjectName){
+            console.log(newProjectList[i].projectName == selectEditProjectName);
             localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(i));
             break;
         }

@@ -32,6 +32,8 @@ for(let j = 0; j < getProjects().length; j++){
 function goToEditProject(index){
     console.log("index: "+ index);
     currentIndex = index;
+    let projectList = getProjects();
+    let currentProjectId = projectList[index].projectId;
     localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(currentIndex));
     window.location.href = "./project-edit.html";
 }

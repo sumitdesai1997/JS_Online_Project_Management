@@ -86,10 +86,10 @@ function addTask(){
 
 getProjects().forEach(function callback(project, index) {
   console.log(project.projectName+"---"+project.projectDescription);
-  console.log("currentIndex: " + currentIndex);
+  console.log("currentIndex:----- " + project.projectId+"=="+currentIndex);
   
-
   if(index == currentIndex){
+    console.log("inside if:"+ project.projectName)
     document.getElementById("editInputName").value = project.projectName;
     document.getElementById("editInputDescription").value = project.projectDescription;
     document.getElementById("editInputStatus").value = project.projectStatus;
