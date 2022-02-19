@@ -9,7 +9,9 @@ var user = {
     password: 12345,
     role:"manager",
     subrole: "manager"
+   
 };
+
 users.push(user)
 
 

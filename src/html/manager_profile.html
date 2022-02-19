@@ -294,7 +294,7 @@
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
                   <li class="nav-item"><a class="nav-link active" href="#aboutMe" data-toggle="tab">About me</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Edit</a></li>
                 </ul>
               </div><!-- /.card-header -->
 
@@ -303,17 +303,17 @@
 
                   <!-- About Me Box -->
                     <div class="active tab-pane" id="aboutMe">
-                      <strong><i class="fas fa-book mr-1"></i> Education</strong>
+                      <strong><i class="fas fa-envelope mr-1"></i> Email</strong>
 
                       <p class="text-muted">
-                        MCA from Punjab Technical University
+                        manager@yopmail.com
                       </p>
 
                       <hr>
 
-                      <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                      <strong><i class="fas fa-file-alt mr-1"></i> Experience</strong>
 
-                      <p class="text-muted">Toronto, Canada</p>
+                      <p class="text-muted">5 Years</p>
 
                       <hr>
 
@@ -329,7 +329,7 @@
 
                       <hr>
 
-                      <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+                      <strong><i class="far fa-file mr-1"></i> Notes</strong>
 
                       <p class="text-muted">Even after Workaholic and Laziness are opposite, I'm both type of person.</p>
                     </div>
@@ -339,7 +339,7 @@
                         <div class="form-group row">
                           <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                           <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputName" placeholder="Name">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
                           </div>
                         </div>
                         <div class="form-group row">
@@ -348,22 +348,24 @@
                             <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                           </div>
                         </div>
-                        <div class="form-group row">
-                          <label for="inputName2" class="col-sm-2 col-form-label">Hourly Rate</label>
-                          <div class="col-sm-10">
-                            <input type="number" class="form-control" id="inputName2" placeholder="Hourly Rate">
-                          </div>
-                        </div>
+                      
                         <div class="form-group row">
                           <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
                           <div class="col-sm-10">
-                            <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                            <input type=""  class="form-control" id="inputExperience" placeholder="Experience"></input>
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label for="inputName2" class="col-sm-2 col-form-label">Notes</label>
+                          <div class="col-sm-10">
+                            <textarea type="text" class="form-control" id="aboutMe" placeholder=""></textarea>
                           </div>
                         </div>
                         <div class="form-group row">
@@ -377,7 +379,7 @@
                         </div>
                         <div class="form-group row">
                           <div class="offset-sm-2 col-sm-10">
-                            <button type="submit" class="btn btn-danger">Submit</button>
+                            <button type="submit" class="btn btn-danger"  onclick="submitProfileChanges()">Submit</button>
                           </div>
                         </div>
                       </form>
@@ -420,6 +422,8 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="../js/contants.js"></script>
+<script src="../js/db.controller.js"></script>
 <script src="../js/manager_profile.js"></script>
 </body>
 </html>

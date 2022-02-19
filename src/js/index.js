@@ -16,6 +16,8 @@ var usersBySubrole = {
     "Full stack developer": userList.filter(user => user.subrole == "Full stack developer"),
 }
 
+var recentProjects= getProjects().reverse().slice(0,5)
+
 getProjects().reverse().slice(0,5).forEach(function callback(project, index) {
     console.log(project.projectName+"---"+project.projectDescription);
     // project.reverse();
@@ -111,7 +113,7 @@ function goToEditProject(){
 
     for(var i = 0; i < newProjectList.length; i++){
         if(newProjectList[i].projectName == selectEditProjectName){
-            console.log(newProjectList[i].projectName == selectEditProjectName);
+            console.log("name matched :: "+newProjectList[i].projectName+"=="+selectEditProjectName);
             localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(i));
             break;
         }
