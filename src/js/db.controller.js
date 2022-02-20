@@ -52,3 +52,18 @@ function addTaskIntoDB(task){
   localStorage.setItem(TASKS, JSON.stringify(taskList));
   
 };
+
+
+function editUserProfile(userEmail,updatedUser){
+  var users=getUsers()
+  
+  users.forEach((user, index) => {
+    if(user.email === userEmail) {
+        users[index] = updatedUser;
+    }
+  });
+localStorage.setItem(CURRENT_USER, JSON.stringify(updatedUser));
+localStorage.setItem(USERS, JSON.stringify(users));
+
+
+}

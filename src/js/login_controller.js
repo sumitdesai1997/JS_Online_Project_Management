@@ -8,7 +8,11 @@ var user = {
     email: "manager@yopmail.com",
     password: 12345,
     role:"manager",
-    subrole: "manager"
+    subrole: "manager",
+    experience: 0,
+    skills:"",
+    note:""
+    
    
 };
 
@@ -21,7 +25,11 @@ var user = {
     password: 12345,
     role:"member",
     subrole: "Back end developer",
-    payrate: 20
+    payrate: 20,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
+
 };
 
 var user1 = {
@@ -146,6 +154,7 @@ users.push(user10);
 users.push(user11);
 users.push(user12);
 
+if(getUsers().size==0)
 addUsers(users)
 //addMembers(members)
 

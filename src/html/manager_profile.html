@@ -264,19 +264,19 @@
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Cathy Wan</h3>
+                <h3 class="profile-username text-center" id="managerName">Cathy Wan</h3>
 
-                <p class="text-muted text-center">Android Application developer</p>
+                <p class="text-muted text-center" id="managerSubRole">Android Application developer</p>
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <!-- <li class="list-group-item">
                     <b>Joined</b> <a class="float-right">09.02.2022</a>
                   </li> -->
                   <li class="list-group-item">
-                    <b>Projects</b> <a class="float-right">2</a>
+                    <b>Projects</b> <a class="float-right" id="managerProjects">2</a>
                   </li>
                   <li class="list-group-item">
-                    <b>Tasks</b> <a class="float-right">7</a>
+                    <b>Tasks</b> <a class="float-right" id="managerTasks">7</a>
                   </li>
                 </ul>
 
@@ -305,7 +305,7 @@
                     <div class="active tab-pane" id="aboutMe">
                       <strong><i class="fas fa-envelope mr-1"></i> Email</strong>
 
-                      <p class="text-muted">
+                      <p class="text-muted" id="managerEmail">
                         manager@yopmail.com
                       </p>
 
@@ -313,13 +313,13 @@
 
                       <strong><i class="fas fa-file-alt mr-1"></i> Experience</strong>
 
-                      <p class="text-muted">5 Years</p>
+                      <p class="text-muted" id="managerExperience">5 Years</p>
 
                       <hr>
 
                       <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
 
-                      <p class="text-muted">
+                      <p class="text-muted" id="managerSkills">
                         <span class="tag tag-danger">Android, </span>
                         <span class="tag tag-success">Java, </span>
                         <span class="tag tag-info">Kotlin, </span>
@@ -331,7 +331,7 @@
 
                       <strong><i class="far fa-file mr-1"></i> Notes</strong>
 
-                      <p class="text-muted">Even after Workaholic and Laziness are opposite, I'm both type of person.</p>
+                      <p class="text-muted" id="managerNotes">Even after Workaholic and Laziness are opposite, I'm both type of person.</p>
                     </div>
 
                     <div class="tab-pane" id="settings">
@@ -339,33 +339,33 @@
                         <div class="form-group row">
                           <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" required>
                           </div>
                         </div>
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                           <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                           <div class="col-sm-10">
                             <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                           </div>
-                        </div>
+                        </div> -->
                       
                         <div class="form-group row">
-                          <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
+                          <label for="inputExperience" class="col-sm-2 col-form-label" required>Experience</label>
                           <div class="col-sm-10">
-                            <input type=""  class="form-control" id="inputExperience" placeholder="Experience"></input>
+                            <input type="number" maxlength="2" max="50" min="1"  class="form-control" id="inputExperience" placeholder="Experience"></input>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
+                          <label for="inputSkills" class="col-sm-2 col-form-label" required>Skills</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
                           </div>
                         </div>
 
                         <div class="form-group row">
-                          <label for="inputName2" class="col-sm-2 col-form-label">Notes</label>
+                          <label for="inputNotes" class="col-sm-2 col-form-label">Notes</label>
                           <div class="col-sm-10">
-                            <textarea type="text" class="form-control" id="aboutMe" placeholder=""></textarea>
+                            <textarea type="text" class="form-control" id="inputNotes" placeholder=""></textarea>
                           </div>
                         </div>
                         <div class="form-group row">

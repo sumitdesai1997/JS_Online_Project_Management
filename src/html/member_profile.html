@@ -264,19 +264,19 @@
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Cathy Wan</h3>
+                <h3 class="profile-username text-center" id="memberName">Cathy Wan</h3>
 
-                <p class="text-muted text-center">Android Application developer</p>
+                <p class="text-muted text-center" id="memberSubRole">Android Application developer</p>
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <!-- <li class="list-group-item">
                     <b>Joined</b> <a class="float-right">09.02.2022</a>
                   </li> -->
                   <li class="list-group-item">
-                    <b>Projects</b> <a class="float-right">2</a>
+                    <b>Projects</b> <a class="float-right" id="memberProjects">2</a>
                   </li>
                   <li class="list-group-item">
-                    <b>Tasks</b> <a class="float-right">7</a>
+                    <b>Tasks</b> <a class="float-right" id="memberTasks">7</a>
                   </li>
                 </ul>
 
@@ -305,24 +305,24 @@
                     <div class="active tab-pane" id="aboutMe">
                      
 
-                      <strong><i class="fas fa-map-marker-alt mr-1"></i> Email</strong>
+                      <strong ><i class="fas fa-map-marker-alt mr-1"></i> Email</strong>
 
-                      <p class="text-muted">memeber@yopmail.com</p>
+                      <p class="text-muted" id="memberEmail">memeber@yopmail.com</p>
 
                       <hr>
                       <strong><i class="fas fa-map-marker-alt mr-1"></i> Hourly Rate</strong>
 
-                      <p class="text-muted">$20</p>
+                      <p class="text-muted" id="memberHourlyRate">$20</p>
 
                       <hr>
                       <strong><i class="fas fa-map-marker-alt mr-1"></i> Experience</strong>
 
-                      <p class="text-muted">4.5 Year</p>
+                      <p class="text-muted" id="memberExperience">4.5 Year</p>
 
                       <hr>
                       <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
 
-                      <p class="text-muted">
+                      <p class="text-muted" id="memberSkills">
                         <span class="tag tag-danger">Android, </span>
                         <span class="tag tag-success">Java, </span>
                         <span class="tag tag-info">Kotlin, </span>
@@ -334,7 +334,7 @@
 
                       <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
-                      <p class="text-muted">Even after Workaholic and Laziness are opposite, I'm both type of person.</p>
+                      <p class="text-muted" id="memberNotes">Even after Workaholic and Laziness are opposite, I'm both type of person.</p>
                     </div>
 
                     <div class="tab-pane" id="settings">
@@ -342,37 +342,37 @@
                         <div class="form-group row">
                           <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" required>
                           </div>
                         </div>
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                           <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                           <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" >
                           </div>
-                        </div>
+                        </div> -->
                         <div class="form-group row">
-                          <label for="inputName2" class="col-sm-2 col-form-label">Hourly Rate</label>
+                          <label for="inputHourlyRate" class="col-sm-2 col-form-label">Hourly Rate</label>
                           <div class="col-sm-10">
-                            <input type="number" class="form-control" id="inputName2" placeholder="Hourly Rate">
+                            <input type="number"  maxlength="3" max="500" min="5"  class="form-control" id="inputHourlyRate" placeholder="Hourly Rate" required>
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
                           <div class="col-sm-10">
-                            <input type="number" class="form-control" id="inputExperience" placeholder="Experience"></input>
+                            <input type="number"  maxlength="2" max="50" min="0"  class="form-control" id="inputExperience" placeholder="Experience" required></input>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
+                          <label for="inputSkills" class="col-sm-2 col-form-label" required>Skills</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                            <input type="text" class="form-control" id="inputSkills" placeholder="Skills" required>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="inputName2" class="col-sm-2 col-form-label">Notes</label>
+                          <label for="inputNotes" class="col-sm-2 col-form-label">Notes</label>
                           <div class="col-sm-10">
-                            <textarea type="text" class="form-control" id="aboutMe" placeholder=""></textarea>
+                            <textarea type="text" class="form-control" id="inputNotes" placeholder=""></textarea>
                           </div>
                         </div>
 
@@ -387,7 +387,7 @@
                         </div>
                         <div class="form-group row">
                           <div class="offset-sm-2 col-sm-10">
-                            <button type="submit" class="btn btn-danger">Submit</button>
+                            <button type="submit" class="btn btn-danger" onclick="submitProfileChanges()">Submit</button>
                           </div>
                         </div>
                       </form>
@@ -430,6 +430,8 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="../js/contants.js"></script>
+<script src="../js/db.controller.js"></script>
 <script src="../js/member_profile.js"></script>
 
 </body>
