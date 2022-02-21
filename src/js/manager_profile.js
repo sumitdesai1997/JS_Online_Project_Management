@@ -11,6 +11,9 @@ IdExperience.value=currentUser.experience
 IdSkills.value=currentUser.skills
 IdNotes.value=currentUser.note
 
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
+
+
 document.getElementById("managerName").innerHTML=currentUser.name
 document.getElementById("managerSubRole").innerHTML=currentUser.subrole
 document.getElementById("managerEmail").innerHTML=currentUser.email

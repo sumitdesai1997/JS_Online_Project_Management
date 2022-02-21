@@ -15,6 +15,7 @@ IdHourlyRate.value=currentUser.payrate
 IdSkills.value=currentUser.skills
 IdNotes.value=currentUser.note
 
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 
 document.getElementById("memberName").innerHTML=currentUser.name
 document.getElementById("memberSubRole").innerHTML=currentUser.subrole

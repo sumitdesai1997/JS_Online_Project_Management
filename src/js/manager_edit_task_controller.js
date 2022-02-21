@@ -8,6 +8,8 @@ var currentTask = taskList.filter(task => task.taskId == currentTaskId)[0];
 var currentProject = projectList.filter(project => project.projectId == currentProjectId)[0];
 
 var projectRelatedTaskList = taskList.filter(task => task.projectId == currentProjectId);
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
+
 
 function onChangeTaskDependency(){
     let value = document.getElementById("managerEditTaskdependant1").checked ? "Yes" : "No";

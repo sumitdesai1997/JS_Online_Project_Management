@@ -16,6 +16,7 @@ for(let i = 0; i < userTaskList.length; i++){
     let markup = "<tr><td> " + i + " </td><td><a>" + userTaskList[i].taskName +"</a><br/><small>" + userTaskList[i].startDate +"</small></td><td>" + userTaskList[i].taskDescription + "</td><td class='project_progress'><div class='progress progress-sm'><div class='progress-bar bg-green' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: 60%'></div></div><small>" + userTaskList[i].left +"</small></td><td class='project-state'><span class='badge badge-success'>" + userTaskList[i].taskStatus +"</span></td><td class='project-actions text-right'><button class='btn btn-info btn-sm' onclick='goToEditTask("+i+")'><i class='fas fa-pencil-alt'></i>Edit</a></td></tr>";
     $("table tbody").append(markup);
 }
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 
 function goToEditTask(index){
     let currentTaskId = userTaskList[index].taskId;

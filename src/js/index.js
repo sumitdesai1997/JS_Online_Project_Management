@@ -16,6 +16,8 @@ var usersBySubrole = {
     "Full stack developer": userList.filter(user => user.subrole == "Full stack developer"),
 }
 
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
+
 var recentProjects= getProjects().reverse().slice(0,5)
 
 getProjects().reverse().slice(0,5).forEach(function callback(project, index) {
@@ -28,7 +30,10 @@ getProjects().reverse().slice(0,5).forEach(function callback(project, index) {
   });
   
 
+// function signOut(){
 
+//     signOut()
+// }
 function loadModalData(){
     
     let projectList = getProjects();

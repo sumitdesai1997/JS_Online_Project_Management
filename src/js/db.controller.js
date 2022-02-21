@@ -67,3 +67,7 @@ localStorage.setItem(USERS, JSON.stringify(users));
 
 
 }
+
+function signOut(){
+  localStorage.removeItem(CURRENT_USER)
+}

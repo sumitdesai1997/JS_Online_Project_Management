@@ -150,12 +150,14 @@ users.push(user6);
 users.push(user7);
 users.push(user8);
 users.push(user9);
-users.push(user10);
+users.push(user10);  
 users.push(user11);
 users.push(user12);
 
-if(getUsers().size==0)
-addUsers(users)
+console.log("userlist size ::"+getUsers().length)
+
+if(getUsers().length==0)
+    addUsers(users)
 //addMembers(members)
 
     
