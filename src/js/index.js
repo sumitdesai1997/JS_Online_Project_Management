@@ -127,3 +127,12 @@ function goToEditProject(index){
 
     window.location.href = "./src/html/project-edit.html"
 }
+
+function goToFilteredTask(index){
+    let currentProjectListInRecentView = getProjects().reverse().slice(0,5);
+   
+    localStorage.setItem(CURRENT_PROJECT_ID, JSON.stringify(currentProjectListInRecentView[index].projectId));
+   
+    localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(index));
+    window.location.href = "./src/html/filtered_task_list.html";
+}
