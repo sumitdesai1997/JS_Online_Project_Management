@@ -1,3 +1,13 @@
+var taskList = getTasks();
+var projectList = getProjects();
+
+var currentTaskId = JSON.parse(localStorage.getItem(CURRENT_TASK_ID));
+var currentProjectId =JSON.parse(localStorage.getItem(CURRENT_PROJECT_ID));
+
+var currentTask = taskList.filter(task => task.taskId == currentTaskId)[0];
+var currentProject = projectList.filter(project => project.projectId == currentProjectId)[0];
+
+var userRelatedProjectList = projectList.filter(project => project.projectMembers.includes( getCurrentUser().email));
 
   $('#btnAddMember').click(function() {
     $('#modal-newMember').modal('show')
@@ -5,7 +15,7 @@
 
 //console.log("currentUser"+ getCurrentUserId())
 
-getProjects().forEach(function callback(project, index) {
+userRelatedProjectList.forEach(function callback(project, index) {
   console.log(project.projectName+"---"+project.projectDescription)
   index++
 
