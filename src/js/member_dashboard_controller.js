@@ -14,6 +14,8 @@
 var taskList = getTasks();
 var userTaskList = taskList.filter(task => task.taskMemberEmail == getCurrentUser().email);
 
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
+
 getProjects().reverse().slice(0,5).forEach(function callback(project, index) {
     console.log(project.projectName+"---"+project.projectDescription);
     // project.reverse();

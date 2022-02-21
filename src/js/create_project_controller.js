@@ -20,6 +20,7 @@ IdProjectStartDate.setAttribute("min", today);
 function setMinForProjectEndDate(){
     IdProjectEndDate.setAttribute("min", IdProjectStartDate.value);
 }
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 
 function addProject(){
    let projectName,projectDescription,projectStatus,startDate,endDate,clientCompany,estimateBudget,estimateHours,totalHours,totalBudget;

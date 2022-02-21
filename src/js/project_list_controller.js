@@ -6,6 +6,7 @@
 ] */
 
 var currentIndex = 0;
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 
 getProjects().forEach(function callback(project, index) {
     console.log(project.projectName+"---"+project.projectDescription);
