@@ -1,3 +1,9 @@
+var projectList = getProjects();
+
+var currentProjectId =JSON.parse(localStorage.getItem(CURRENT_PROJECT_ID));
+
+var currentProject = projectList.filter(project => project.projectId == currentProjectId)[0];
+
 var IdProjectStartDate = document.getElementById("editprojectStartDate");
 var IdProjectEndDate = document.getElementById("editprojectEndDate");
 
@@ -84,24 +90,17 @@ function addTask(){
   addTaskIntoDB(task);
 }
 
-getProjects().forEach(function callback(project, index) {
-  console.log(project.projectName+"---"+project.projectDescription);
-  console.log("currentIndex:----- " + project.projectId+"=="+currentIndex);
-  
-  if(index == currentIndex){
-    console.log("inside if:"+ project.projectName)
-    document.getElementById("editInputName").value = project.projectName;
-    document.getElementById("editInputDescription").value = project.projectDescription;
-    document.getElementById("editInputStatus").value = project.projectStatus;
-    document.getElementById("editprojectStartDate").value = project.startDate;
-    document.getElementById("editprojectEndDate").value = project.endDate;
-    document.getElementById("editIputClientCompany").value = project.clientCompany;
-    document.getElementById("editInputEstimatedBudget").value = project.estimateBudget;
-    document.getElementById("editInputEstimatedHours").value = project.estimateHours;
-  }
 
-  index++;
-});
+//console.log("inside if:"+ project.projectName)
+document.getElementById("editInputName").value = currentProject.projectName;
+document.getElementById("editInputDescription").value = currentProject.projectDescription;
+document.getElementById("editInputStatus").value = currentProject.projectStatus;
+document.getElementById("editprojectStartDate").value = currentProject.startDate;
+document.getElementById("editprojectEndDate").value = currentProject.endDate;
+document.getElementById("editIputClientCompany").value = currentProject.clientCompany;
+document.getElementById("editInputEstimatedBudget").value = currentProject.estimateBudget;
+document.getElementById("editInputEstimatedHours").value = currentProject.estimateHours;
+
 
 function saveChanges(){
   getProjects().forEach(function callback(project, index) {

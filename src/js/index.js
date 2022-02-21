@@ -107,17 +107,18 @@ function addMemberToProject(){
     }
 }
 
-function goToEditProject(){
-    let newProjectList = getProjects();
-    let selectEditProjectName = document.getElementById("selectEditProject").value;
+function goToEditProject(index){
+    let currentProjectListInRecentView = getProjects().reverse().slice(0,5);
+   
+    localStorage.setItem(CURRENT_PROJECT_ID, JSON.stringify(currentProjectListInRecentView[index].projectId));
 
-    for(var i = 0; i < newProjectList.length; i++){
+   /*  for(var i = 0; i < newProjectList.length; i++){
         if(newProjectList[i].projectName == selectEditProjectName){
             console.log("name matched :: "+newProjectList[i].projectName+"=="+selectEditProjectName);
             localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(i));
             break;
         }
-    }
+    } */
 
     window.location.href = "./src/html/project-edit.html"
 }
