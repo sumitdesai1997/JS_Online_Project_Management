@@ -14,13 +14,13 @@ document.getElementById("navUserName").innerHTML= getCurrentUser().name
 for(let i = 0; i < userRelatedCurrentProjectTaskList.length; i++){
 
     let className;
-    if(project.projectStatus == "Success"){
+    if(userRelatedCurrentProjectTaskList[i].taskStatus == "Success"){
         className = "badge-success";
-    } else if (project.projectStatus == "Work in progress"){
+    } else if (userRelatedCurrentProjectTaskList[i].taskStatus == "Work in progress"){
         className ="badge-primary";
-    } else if(project.projectStatus == "Canceled"){
+    } else if(userRelatedCurrentProjectTaskList[i].taskStatus == "Canceled"){
         className ="badge-danger";
-    } else if(project.projectStatus == "On Hold"){
+    } else if(userRelatedCurrentProjectTaskList[i].taskStatus == "On Hold"){
         className ="badge-warning";
     } else {
         className ="badge-success";

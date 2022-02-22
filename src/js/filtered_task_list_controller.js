@@ -7,13 +7,13 @@ document.getElementById("navUserName").innerHTML= getCurrentUser().name
 for(let i = 0; i < projectRelatedTaskList.length; i++){
 
     let className;
-    if(project.projectStatus == "Success"){
+    if(projectRelatedTaskList[i].taskStatus == "Success"){
         className = "badge-success";
-    } else if (project.projectStatus == "Work in progress"){
+    } else if (projectRelatedTaskList[i].taskStatus == "Work in progress"){
         className ="badge-primary";
-    } else if(project.projectStatus == "Canceled"){
+    } else if(projectRelatedTaskList[i].taskStatus == "Canceled"){
         className ="badge-danger";
-    } else if(project.projectStatus == "On Hold"){
+    } else if(projectRelatedTaskList[i].taskStatus == "On Hold"){
         className ="badge-warning";
     } else {
         className ="badge-success";

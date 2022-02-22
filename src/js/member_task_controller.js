@@ -15,13 +15,13 @@ $('#btnAddMember').click(function() {
 for(let i = 0; i < userTaskList.length; i++){
 
     let className;
-    if(project.projectStatus == "Success"){
+    if(userTaskList[i].taskStatus == "Success"){
         className = "badge-success";
-    } else if (project.projectStatus == "Work in progress"){
+    } else if (userTaskList[i].taskStatus == "Work in progress"){
         className ="badge-primary";
-    } else if(project.projectStatus == "Canceled"){
+    } else if(userTaskList[i].taskStatus == "Canceled"){
         className ="badge-danger";
-    } else if(project.projectStatus == "On Hold"){
+    } else if(userTaskList[i].taskStatus == "On Hold"){
         className ="badge-warning";
     } else {
         className ="badge-success";
