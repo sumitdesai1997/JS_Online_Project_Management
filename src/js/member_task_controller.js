@@ -13,7 +13,21 @@ $('#btnAddMember').click(function() {
 ] */
 
 for(let i = 0; i < userTaskList.length; i++){
-    let markup = "<tr><td> " + (i+1) + " </td><td><a>" + userTaskList[i].taskName +"</a><br/><small>" + userTaskList[i].startDate +"</small></td><td>" + userTaskList[i].taskDescription + "</td><td >" + getNumberOfDays(new Date(), userTaskList[i].endDate) + " days</td><td class='project-state'><span class='badge badge-success'>" + userTaskList[i].taskStatus +"</span></td><td class='project-actions text-right'><button class='btn btn-info btn-sm' onclick='goToEditTask("+i+")'><i class='fas fa-pencil-alt'></i>Edit</a></td></tr>";
+
+    let className;
+    if(project.projectStatus == "Success"){
+        className = "badge-success";
+    } else if (project.projectStatus == "Work in progress"){
+        className ="badge-primary";
+    } else if(project.projectStatus == "Canceled"){
+        className ="badge-danger";
+    } else if(project.projectStatus == "On Hold"){
+        className ="badge-warning";
+    } else {
+        className ="badge-success";
+    }
+
+    let markup = "<tr><td> " + (i+1) + " </td><td><a>" + userTaskList[i].taskName +"</a><br/><small>" + userTaskList[i].startDate +"</small></td><td>" + userTaskList[i].taskDescription + "</td><td >" + getNumberOfDays(new Date(), userTaskList[i].endDate) + " days</td><td class='project-state'><span class='badge "+className+"'>" + userTaskList[i].taskStatus +"</span></td><td class='project-actions text-right'><button class='btn btn-info btn-sm' onclick='goToEditTask("+i+")'><i class='fas fa-pencil-alt'></i>Edit</a></td></tr>";
     $("table tbody").append(markup);
 }
 document.getElementById("navUserName").innerHTML= getCurrentUser().name

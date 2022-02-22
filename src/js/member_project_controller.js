@@ -24,7 +24,20 @@ var userRelatedProjectList = projectList.filter(project => project.projectMember
 userRelatedProjectList.forEach(function callback(project, index) {
   console.log(project.projectName+"---"+project.projectDescription)
 
-  let markup = "<tr><td>" + (index+1) + "</td><td><a>"+ project.projectName +"</a><br/><small>Created "+ project.startDate +"</small></td><td><ul class='list-inline'>"+ project.imgAvatar +"</ul></td><td >"+ getNumberOfDays(new Date(), project.endDate) +" Days</td><td class='project-state'><span class='badge badge-success'>"+ project.projectStatus +"</span></td><td class='project-actions text-right'><button class='btn btn-primary btn-sm'onclick='goToProjectRelatedTask("+index+")'><i class='fas fa-folder'></i>  View Task</button></td></tr>";
+  let className;
+  if(project.projectStatus == "Success"){
+      className = "badge-success";
+  } else if (project.projectStatus == "Work in progress"){
+      className ="badge-primary";
+  } else if(project.projectStatus == "Canceled"){
+      className ="badge-danger";
+  } else if(project.projectStatus == "On Hold"){
+      className ="badge-warning";
+  } else {
+      className ="badge-success";
+  }
+
+  let markup = "<tr><td>" + (index+1) + "</td><td><a>"+ project.projectName +"</a><br/><small>Created "+ project.startDate +"</small></td><td><ul class='list-inline'>"+ project.imgAvatar +"</ul></td><td >"+ getNumberOfDays(new Date(), project.endDate) +" Days</td><td class='project-state'><span class='badge "+className+"'>"+ project.projectStatus +"</span></td><td class='project-actions text-right'><button class='btn btn-primary btn-sm'onclick='goToProjectRelatedTask("+index+")'><i class='fas fa-folder'></i>  View Task</button></td></tr>";
   //let markup = "<tr><td> " + (index+1) + "</td><td><a>"+ project.projectName +"</a><br/><small>" + project.startDate + "</small></td><td><ul class='list-inline'>"+ project.imgAvatar +"<li class='list-inline-item'><button id='btnAddMember"+index+"' type='button' class='btn' data-toggle='modal' data-target='#modal-success'></button></li></ul></td><td class='project_progress'><div class='progress progress-sm'><div class='progress-bar bg-green' role='progressbar' aria-valuenow='57' aria-valuemin='0' aria-valuemax='100' style='width: 57%'></div></div><small> " + project.estimateHours + "</small></td><td class='project-state'><span class='badge badge-success'> " + project.projectStatus + " </span></td><td class='project-actions text-right'><a class='btn btn-primary btn-sm' onclick='goToEditProject("+index+")'><i class='fas fa-pencil-alt'></i> Edit</a>&nbsp; &nbsp;<a class='btn btn-info btn-sm' onclick='goToFilteredTask("+index+")'><i class='fas fa-folder'></i>View task</a></td></tr>";
   $("table tbody").append(markup);
   
