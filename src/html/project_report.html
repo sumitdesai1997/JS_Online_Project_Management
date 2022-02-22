@@ -276,7 +276,7 @@
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+              <!-- <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
                 <div class="row">
                   <div class="col-12 col-sm-3">
                     <div class="info-box bg-light">
@@ -327,70 +327,8 @@
                     </div>
                   </div>                  
                 </div>
-                <div class="row">
-                  <div class="col-12">
-                    <h4>Recent Activity</h4>
-                      <div class="post">
-                        <div class="user-block">
-                          <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                          <span class="username">
-                            <a href="#">Jonathan Burke Jr.</a>
-                          </span>
-                          <span class="description">Shared publicly - 7:45 PM today</span>
-                        </div>
-                        <!-- /.user-block -->
-                        <p>
-                          Lorem ipsum represents a long-held tradition for designers,
-                          typographers and the like. Some people hate it and argue for
-                          its demise, but others ignore.
-                        </p>
-  
-                        <p>
-                          <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
-                        </p>
-                      </div>
-  
-                      <div class="post clearfix">
-                        <div class="user-block">
-                          <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
-                          <span class="username">
-                            <a href="#">Sarah Ross</a>
-                          </span>
-                          <span class="description">Sent you a message - 3 days ago</span>
-                        </div>
-                        <!-- /.user-block -->
-                        <p>
-                          Lorem ipsum represents a long-held tradition for designers,
-                          typographers and the like. Some people hate it and argue for
-                          its demise, but others ignore.
-                        </p>
-                        <p>
-                          <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
-                        </p>
-                      </div>
-  
-                      <div class="post">
-                        <div class="user-block">
-                          <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                          <span class="username">
-                            <a href="#">Jonathan Burke Jr.</a>
-                          </span>
-                          <span class="description">Shared publicly - 5 days ago</span>
-                        </div>
-                        <!-- /.user-block -->
-                        <p>
-                          Lorem ipsum represents a long-held tradition for designers,
-                          typographers and the like. Some people hate it and argue for
-                          its demise, but others ignore.
-                        </p>
-  
-                        <p>
-                          <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
-                        </p>
-                      </div>
-                  </div>
-                </div>
-              </div>
+                
+              </div> -->
               <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
                 <h3 class="text-primary" id="reportProjectName"></h3>
                 <p class="text-muted" id="reportProjectDescription"></p>
@@ -430,7 +368,155 @@
                   <a href="#" class="btn btn-sm btn-warning">Report contact</a>
                 </div> -->
               </div>
+            </div>      
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Budget Analysis</h3>
+  
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                <i class="fas fa-times"></i>
+              </button>
             </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-12 order-2 order-md-1">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Estimated budget</span>
+                        <span class="info-box-number text-center text-muted mb-0" id="estimatedBudget">2300</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Total amount spent</span>
+                        <span class="info-box-number text-center text-muted mb-0" id="amountSpent">2000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Estimated duration</span>
+                        <span class="info-box-number text-center text-muted mb-0" id="estimatedDuration">20</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Total time spent</span>
+                        <span class="info-box-number text-center text-muted mb-0" id="timeSpent">18</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Budget efficiency</span>
+                        <span class="info-box-number text-center text-muted mb-0" id="budgetEffi">2000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Time efficiency</span>
+                        <span class="info-box-number text-center text-muted mb-0" id="timeEffi">2000</span>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>     
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Task Analysis</h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <p class="lead">Task Details:</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Task</th>
+                    <th>Task description</th>
+                    <th>Estimated budget</th>
+                    <th>Amount spent</th>
+                  </tr>
+                </thead>
+                <tbody id="taskBudget">
+                </tbody>
+              </table>
+            </div> 
+            <div class="row">
+
+              <div class="col-6">
+              <p class="lead">Payment Methods:</p>
+              <img src="../../dist/img/credit/visa.png" alt="Visa">
+              <img src="../../dist/img/credit/mastercard.png" alt="Mastercard">
+              <img src="../../dist/img/credit/american-express.png" alt="American Express">
+              <img src="../../dist/img/credit/paypal2.png" alt="Paypal">
+              <!-- <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+              Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem
+              plugg
+              dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+              </p> -->
+              </div>
+              <br>
+              <div class="col-6">
+              <p class="lead" id="amountDue">Amount Due 2/22/2014</p>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                  <tr>
+                    <th style="width:50%">Subtotal:</th>
+                    <td id="subTotal">$250.30</td>
+                  </tr>
+                  <tr>
+                    <th>Tax (18%)</th>
+                    <td id="tax">$10.34</td>
+                  </tr>
+                  <tr>
+                    <th>Total:</th>
+                    <td id="total">$265.24</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+              
+              </div>    
           </div>
           <!-- /.card-body -->
         </div>
@@ -468,7 +554,8 @@
 <script type="text/javascript" src="../../src/model/project.js"></script>
 <script type="text/javascript" src="../../src/js/contants.js"></script>
 <script type="text/javascript" src="../../src/js/db.controller.js"></script>
-<script type="text/javascript" src="../../src/js/completed_projects_controller.js"></script>
+<script type="text/javascript" src="../../src/js/project_report_controller.js"></script>
+
 
 
 </body>
