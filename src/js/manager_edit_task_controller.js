@@ -49,6 +49,11 @@ document.getElementById("managerEditTaskDescription").value = currentTask.taskDe
 document.getElementById("managerEditTaskStartDate").value = currentTask.startDate;
 document.getElementById("managerEditTaskEndDate").value = currentTask.endDate;
 document.getElementById("managerEditTaskHours").value = currentTask.taskEstimateHours;
+document.getElementById("managerEditTaskCompletionHours").value = parseInt(currentTask.actualTaskHours);
+document.getElementById("managerEditTaskComments").value = currentTask.taskComment;
+
+document.getElementById("managerEditTaskCompletionHours").disabled = true;
+document.getElementById("managerEditTaskComments").disabled = true;
 
 if(currentTask.isTaskIndependent == "Yes"){
     document.getElementById("managerEditTaskdependant1").checked = true;

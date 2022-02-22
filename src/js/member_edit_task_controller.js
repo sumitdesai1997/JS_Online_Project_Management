@@ -26,6 +26,9 @@ if(currentTask.isTaskIndependent == "No"){
 document.getElementById("memberEditTaskEndDate").value = currentTask.endDate;
 document.getElementById("memberEditTaskHour").value = currentTask.taskEstimateHours;
 
+document.getElementById("taskCompletionHours").value = parseInt(currentTask.actualTaskHours);
+document.getElementById("taskComments").value = currentTask.taskComment;
+
 function memberEditTask(){
     // TASKS UPDATE
     var newTaskList = getTasks();
