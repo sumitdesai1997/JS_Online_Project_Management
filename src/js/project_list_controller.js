@@ -103,7 +103,7 @@ function addMemberToProject(){
         let projectToBeRemoved = newProjectList.splice(currentIndex, 1)[0];
 
         projectToBeRemoved.projectMembers.push(memberEmail);
-        projectToBeRemoved.imgAvatar += "<li class='list-inline-item'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar.png'></li>";
+        projectToBeRemoved.imgAvatar += "<li class='list-inline-item'><a data-toggle='tooltip' data-placement='top' title='"+ memberEmail.split("@")[0].toUpperCase() +"'><img alt='Avatar' class='table-avatar' src='../../dist/img/avatar.png'></li>";
 
         var editedProject = new Project(projectToBeRemoved.projectId, projectToBeRemoved.projectName, projectToBeRemoved.projectDescription, projectToBeRemoved.projectStatus, projectToBeRemoved.startDate, projectToBeRemoved.endDate, projectToBeRemoved.clientCompany, projectToBeRemoved.estimateBudget, projectToBeRemoved.estimateHours, projectToBeRemoved.projectMembers, projectToBeRemoved.imgAvatar, projectToBeRemoved.taskList);
         newProjectList.push(editedProject);
