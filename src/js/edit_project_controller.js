@@ -60,6 +60,24 @@ function addTask(){
   //let taskEstimateBudget = document.getElementById("inputTaskCost").value;
   let isTaskIndependent = document.getElementById("taskdependant1").checked ? "Yes" : "No";
   let dependentTask = isTaskIndependent == "No" ? document.getElementById("dependentTask").value : "";
+    
+
+  if(taskName==""){
+    window.alert("Enter Task Name")
+  }else if(taskDescription==""){
+    window.alert("Enter Task Description")
+  }else if(taskStatus==""){
+    window.alert("Select Task Status")
+  }else if(startDate==""){
+    window.alert("Enter start date")
+  }else if(endDate==""){
+    window.alert("Enter end date")
+  }else if (taskMemberEmail==""){
+    window.alert("Select task member")
+  }else if (taskEstimateHours==""){
+    window.alert("Enter Estimated Hours")
+  }else{
+
  
   dependentTask = dependentTask == "No tasks created yet" ? "" : dependentTask;
   isTaskIndependent = dependentTask == "" ? "Yes" : "No";
@@ -93,6 +111,7 @@ function addTask(){
   setTimeout(function(){window.location.href="../../index.html";}, 3500);
 
   addTaskIntoDB(task);
+  }
 }
 
 
