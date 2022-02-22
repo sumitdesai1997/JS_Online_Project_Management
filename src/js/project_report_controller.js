@@ -10,6 +10,7 @@ var teamMemberList = userList.filter(user => currentProject.projectMembers.inclu
 
 var totalAmount = 0;
 var totalTime = 0;
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 //var teamMemberNameList = [];
 teamMemberList.forEach(element => {
     document.getElementById("reportTeamMember").innerHTML += element.name + "<br>";
