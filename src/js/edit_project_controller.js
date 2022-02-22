@@ -71,9 +71,12 @@ function addTask(){
   let actualTaskBudget = -1;
   let taskComment = ""
 
-  var task = new Task(taskId, taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask, newProjectList[currentIndex].projectId, actualTaskHours, actualTaskBudget, taskComment);
+  var task = new Task(taskId, taskName, taskDescription, taskStatus, startDate, endDate, taskMemberEmail, taskEstimateBudget, taskEstimateHours, isTaskIndependent, dependentTask, currentProjectId, actualTaskHours, actualTaskBudget, taskComment);
 
-  let projectToBeRemoved = newProjectList.splice(currentIndex, 1)[0];
+  const index = newProjectList.map(project => project.projectId).indexOf(currentProjectId);
+  let projectToBeRemoved = newProjectList.splice(index, 1)[0];
+
+  //let projectToBeRemoved = newProjectList.splice(currentIndex, 1)[0];
 
   projectToBeRemoved.taskList.push(task);
 
@@ -105,40 +108,35 @@ document.getElementById("editInputEstimatedHours").value = currentProject.estima
 
 
 function saveChanges(){
-  getProjects().forEach(function callback(project, index) {
-    currentIndex = localStorage.getItem(CURRENT_PROJECT_INDEX, JSON.parse(currentIndex));
+    //currentIndex = localStorage.getItem(CURRENT_PROJECT_INDEX, JSON.parse(currentIndex));
   
-    if(index == currentIndex){
-      let newProjectList = getProjects();
-      let projectToBeRemoved = newProjectList.splice(index, 1)[0];
-      
-      let projectName = document.getElementById("editInputName").value;
-      let projectDescription = document.getElementById("editInputDescription").value;
-      let projectStatus = document.getElementById("editInputStatus").value;
-      let startDate = document.getElementById("editprojectStartDate").value;
-      let endDate = document.getElementById("editprojectEndDate").value;
-      let clientCompany = document.getElementById("editIputClientCompany").value;
-      let estimateBudget = document.getElementById("editInputEstimatedBudget").value;
-      let estimateHours = document.getElementById("editInputEstimatedHours").value;
-      let projectMembers = projectToBeRemoved.projectMembers;
-      let imgAvatar = projectToBeRemoved.imgAvatar;
-      let taskList = projectToBeRemoved.taskList;
-      let projectId = projectToBeRemoved.projectId;
+    let newProjectList = getProjects();
+    const index = newProjectList.map(project => project.projectId).indexOf(currentProjectId);
+    let projectToBeRemoved = newProjectList.splice(index, 1)[0];
+    
+    let projectName = document.getElementById("editInputName").value;
+    let projectDescription = document.getElementById("editInputDescription").value;
+    let projectStatus = document.getElementById("editInputStatus").value;
+    let startDate = document.getElementById("editprojectStartDate").value;
+    let endDate = document.getElementById("editprojectEndDate").value;
+    let clientCompany = document.getElementById("editIputClientCompany").value;
+    let estimateBudget = document.getElementById("editInputEstimatedBudget").value;
+    let estimateHours = document.getElementById("editInputEstimatedHours").value;
+    let projectMembers = projectToBeRemoved.projectMembers;
+    let imgAvatar = projectToBeRemoved.imgAvatar;
+    let taskList = projectToBeRemoved.taskList;
+    let projectId = projectToBeRemoved.projectId;
 
-      var editedProject = new Project(projectId, projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
-      newProjectList.push(editedProject);
-      
-      localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
+    var editedProject = new Project(projectId, projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
+    newProjectList.push(editedProject);
+    
+    localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
 
-      var x = document.getElementById("toastEditProject");
-      x.className = "show";
-      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    var x = document.getElementById("toastEditProject");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 
-      setTimeout(function(){window.location.href="../../index.html";}, 3500);
-    }
-  
-    index++;
-  });
+    setTimeout(function(){window.location.href="../../index.html";}, 3500);
 }
 
 function loadMemberEmails(){
