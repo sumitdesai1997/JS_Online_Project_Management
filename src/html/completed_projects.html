@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Task list</title>
+  <title>Completed Projects</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -15,9 +15,8 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
- 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -146,7 +145,7 @@
         </a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link"  href="./user_profile.html" role="button">
+        <a class="nav-link"  href="./manager_profile.html" role="button">
           <img alt="Avatar" width="35" height="35" class="table-avatar" src="../../dist/img/avatar.png">
         </a>
       </li>
@@ -158,77 +157,88 @@
     </ul>
   </nav>
   <!-- /.navbar -->
-  <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="image">
-            <img src="../../dist/img/avatar3.png" class="img-circle elevation-2" alt="User Image">
-          </div><span></span><span></span><span></span><span></span>
-          <div class="info">
-            <a href="#" class="d-block" id="navUserName">Jamie Samson</a>
-          </div>
+    
+        
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div><span></span><span></span><span></span><span></span>
+        <div class="info">
+          <a href="#" class="d-block" id="navUserName">Cathy Wan</a>
         </div>
-  
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-  
-            <li class="nav-item">
-              <a href="../../member_dashboard.html" class="nav-link">
-                <!-- <i class="nav-icon far fa-image"></i> -->
-                <i class="fas fa-home"></i>&nbsp;
-                <p>
-                  Home
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./member_task.html" class="nav-link">
-                <!-- <i class="nav-icon far fa-image"></i> -->
-                <i class="fas fa-tasks"></i>&nbsp;
-                <p>
-                  Tasks
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./member_project.html" class="nav-link">
-                <!-- <i class="nav-icon fas fa-columns"></i> -->
-                <i class="fas fa-project-diagram"></i>&nbsp;
-                <p>
-                  Projects
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./completed_projects.html" class="nav-link">
-                <!-- <i class="nav-icon fas fa-columns"></i> -->
-                <i class="fas fa-clock"></i>&nbsp;
-                <p>
-                  Completed Projects
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./login.html" class="nav-link">
-                <!-- <i class="nav-icon fas fa-columns"></i> -->
-                <i class="fas fa-sign-out-alt"></i>&nbsp;
-                <p  onclick="signOut()">
-                  Sign out
-                </p>
-              </a>
-            </li>
-            
-          </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
       </div>
-      <!-- /.sidebar -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">
+              <!-- <i class="nav-icon far fa-image"></i> -->
+              <i class="fas fa-home"></i>&nbsp;
+              <p>
+                Home
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./addProject.html" class="nav-link">
+              <!-- <i class="nav-icon far fa-image"></i> -->
+              <i class="fas fa-plus"></i>&nbsp;
+              <p>
+                Create project
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./project.html" class="nav-link">
+              <!-- <i class="nav-icon fas fa-columns"></i> -->
+              <i class="fas fa-project-diagram"></i>&nbsp;
+              <p>
+                Projects
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./completed_projects.html" class="nav-link">
+              <!-- <i class="nav-icon fas fa-columns"></i> -->
+              <i class="fas fa-clock"></i>&nbsp;
+              <p>
+                Completed Projects
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./manager_profile.html" class="nav-link">
+              <!-- <i class="nav-icon fas fa-columns"></i> -->
+              <i class="fas fa-user"></i>&nbsp;
+              <p>
+                About me
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./login.html" class="nav-link">
+              <!-- <i class="nav-icon fas fa-columns"></i> -->
+              <i class="fas fa-sign-out-alt"></i>&nbsp;
+              <p  onclick="signOut()">
+                Sign out
+              </p>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
@@ -238,7 +248,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tasks</h1>
+            <h1>Projects</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -256,7 +266,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Task list</h3>
+          <h3 class="card-title">Projects</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -272,16 +282,16 @@
               <thead>
                   <tr>
                       <th style="width: 1%">
-                         No.
+                            No.
                       </th>
                       <th style="width: 20%">
-                          Task Name
+                          Project Name
                       </th>
                       <th style="width: 30%">
-                          Task description
+                          Team Members
                       </th>
                       <th>
-                          Days left
+                          Project Progress
                       </th>
                       <th style="width: 8%" class="text-center">
                           Status
@@ -312,27 +322,19 @@
                 
                 <div class="form-group">
                   <label>Role of Member</label>
-                  <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                  <option selected="selected" data-select2-id="3">Alabama</option>
-                  <option data-select2-id="34">Alaska</option>
-                  <option data-select2-id="35">California</option>
-                  <option data-select2-id="36">Delaware</option>
-                  <option data-select2-id="37">Tennessee</option>
-                  <option data-select2-id="38">Texas</option>
-                  <option data-select2-id="39">Washington</option>
+                  <select id="selecteRoleOfMember" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" onchange="onChangeOfRole(this.value)">
+                  <option selected disabled>Select the role of member</option>
+                  <option value="Business Analyst">Business Analyst</option>
+                  <option value="Front end developer">Front end developer</option>
+                  <option value="Back end developer">Back end developer</option>
+                  <option value="Full stack developer">Full stack developer</option>
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label>Email</label>
-                  <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                  <option selected="selected" data-select2-id="3">Alabama</option>
-                  <option data-select2-id="34">Alaska</option>
-                  <option data-select2-id="35">California</option>
-                  <option data-select2-id="36">Delaware</option>
-                  <option data-select2-id="37">Tennessee</option>
-                  <option data-select2-id="38">Texas</option>
-                  <option data-select2-id="39">Washington</option>
+                  <select id="selecteMemberEmail" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                    <option selected="selected" disabled>Select memeber</option>
                   </select>
                 </div>
 
@@ -346,7 +348,7 @@
                 Close
               </button>
 
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success" onclick="addMemberToProject()">
                 Save
               </button>
             </div>
@@ -387,10 +389,10 @@
 <script src="../../dist/js/demo.js"></script>
 
 <script type="text/javascript" src="../../src/model/project.js"></script>
-<script type="text/javascript" src="../../src/model/task.js"></script>
 <script type="text/javascript" src="../../src/js/contants.js"></script>
 <script type="text/javascript" src="../../src/js/db.controller.js"></script>
-<script type="text/javascript" src="../js/filtered_task_list_controller.js"></script>
+<script type="text/javascript" src="../../src/js/project_list_controller.js"></script>
+<script type="text/javascript" src="../../src/js/edit_project_controller.js"></script>
 
 </body>
 </html>

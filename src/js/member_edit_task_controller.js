@@ -49,6 +49,9 @@ function memberEditTask(){
     let actualTaskBudget = userList.filter(user => user.email == getCurrentUser().email)[0].payrate * parseInt(actualTaskHours);
     let taskComment = document.getElementById("taskComments").value;
 
+    
+
+
     var editedTask = new Task(taskToBeRemoved.taskId, taskToBeRemoved.taskName, taskToBeRemoved.taskDescription, taskStatus, taskToBeRemoved.startDate, taskToBeRemoved.endDate, taskToBeRemoved.taskMemberEmail, taskToBeRemoved.taskEstimateBudget, taskToBeRemoved.taskEstimateHours, taskToBeRemoved.isTaskIndependent, taskToBeRemoved.dependentTask, currentProjectId, actualTaskHours, actualTaskBudget, taskComment);
     newTaskList.push(editedTask);
 
