@@ -38,7 +38,10 @@ var user1 = {
     password: 12345,
     role:"member",
     subrole: "Front end developer",
-    payrate: 20
+    payrate: 20,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user2 = {
@@ -47,7 +50,10 @@ var user2 = {
     password: 12345,
     role:"member",
     subrole: "Back end developer",
-    payrate: 25
+    payrate: 25,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user3 = {
@@ -56,7 +62,10 @@ var user3 = {
     password: 12345,
     role:"member",
     subrole: "Full stack developer",
-    payrate: 22
+    payrate: 22,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user4 = {
@@ -65,7 +74,10 @@ var user4 = {
     password: 12345,
     role:"member",
     subrole: "Full stack developer",
-    payrate: 24
+    payrate: 24,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user5 = {
@@ -74,7 +86,10 @@ var user5 = {
     password: 12345,
     role:"member",
     subrole: "Full stack developer",
-    payrate: 30
+    payrate: 30,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user6 = {
@@ -83,7 +98,10 @@ var user6 = {
     password: 12345,
     role:"member",
     subrole: "Back end developer",
-    payrate: 27
+    payrate: 27,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user7 = {
@@ -92,7 +110,10 @@ var user7 = {
     password: 12345,
     role:"member",
     subrole: "Full stack developer",
-    payrate: 25
+    payrate: 25,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user8 = {
@@ -101,7 +122,10 @@ var user8 = {
     password: 12345,
     role:"member",
     subrole: "Front end developer",
-    payrate: 21
+    payrate: 21,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user9 = {
@@ -110,7 +134,10 @@ var user9 = {
     password: 12345,
     role:"member",
     subrole: "Back end developer",
-    payrate: 30
+    payrate: 30,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user10 = {
@@ -119,7 +146,10 @@ var user10 = {
     password: 12345,
     role:"member",
     subrole: "Business Analyst",
-    payrate: 18
+    payrate: 18,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user11 = {
@@ -128,7 +158,10 @@ var user11 = {
     password: 12345,
     role:"member",
     subrole: "Business Analyst",
-    payrate: 16
+    payrate: 16,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 var user12 = {
@@ -137,7 +170,10 @@ var user12 = {
     password: 12345,
     role:"member",
     subrole: "Front end developer",
-    payrate: 25
+    payrate: 25,
+    experience: 0,
+    skills:"Java Script, Php",
+    note:""
 };
 
 users.push(user);

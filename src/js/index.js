@@ -30,10 +30,6 @@ getProjects().reverse().slice(0,5).forEach(function callback(project, index) {
   });
   
 
-// function signOut(){
-
-//     signOut()
-// }
 function loadModalData(){
     
     let projectList = getProjects();
