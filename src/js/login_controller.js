@@ -4,13 +4,13 @@ var users =[]
 // var members =[]
 
 var user = {
-    name: "manager",
+    name: "Richardson",
     email: "manager@yopmail.com",
     password: 12345,
     role:"manager",
     subrole: "manager",
-    experience: 0,
-    skills:"",
+    experience: 2,
+    skills:"Team management, Scrum management",
     note:""
     
    
@@ -33,7 +33,7 @@ var user = {
 };
 
 var user1 = {
-    name: "dinamol",
+    name: "Dinamol",
     email: "dinamol@yopmail.com",
     password: 12345,
     role:"member",
@@ -45,7 +45,7 @@ var user1 = {
 };
 
 var user2 = {
-    name: "ranjana",
+    name: "Ranjana",
     email: "ranjana@yopmail.com",
     password: 12345,
     role:"member",
@@ -57,7 +57,7 @@ var user2 = {
 };
 
 var user3 = {
-    name: "mihin",
+    name: "Mihin",
     email: "mihin@yopmail.com",
     password: 12345,
     role:"member",
@@ -69,7 +69,7 @@ var user3 = {
 };
 
 var user4 = {
-    name: "sumit",
+    name: "Sumit",
     email: "sumit@yopmail.com",
     password: 12345,
     role:"member",
