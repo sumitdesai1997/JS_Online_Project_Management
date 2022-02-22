@@ -10,6 +10,30 @@ var currentProject = projectList.filter(project => project.projectId == currentP
 var projectRelatedTaskList = taskList.filter(task => task.projectId == currentProjectId);
 //document.getElementById("navUserName").innerHTML= getCurrentUser().name
 
+var IdTaskStartDate = document.getElementById("managerEditTaskStartDate");
+var IdTaskEndDate = document.getElementById("managerEditTaskEndDate");
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+
+if (dd < 10) {
+  dd = '0' + dd;
+}
+
+if (mm < 10) {
+  mm = '0' + mm;
+} 
+    
+today = yyyy + '-' + mm + '-' + dd;
+IdTaskStartDate.setAttribute("min", today);
+
+//document.getElementById("navUserName").innerHTML= getCurrentUser().name
+
+function setMinForTaskEndDate(){
+    IdTaskEndDate.setAttribute("min", IdTaskStartDate.value);
+}
 
 function onChangeTaskDependency(){
     let value = document.getElementById("managerEditTaskdependant1").checked ? "Yes" : "No";

@@ -29,6 +29,17 @@ function setMinForProjectEndDate(){
   IdProjectEndDate.setAttribute("min", IdProjectStartDate.value);
 }
 
+var IdTaskStartDate = document.getElementById("taskStartDate");
+var IdTaskEndDate = document.getElementById("taskEndDate");
+
+IdTaskStartDate.setAttribute("min", today);
+
+//document.getElementById("navUserName").innerHTML= getCurrentUser().name
+
+function setMinForTaskEndDate(){
+  IdTaskEndDate.setAttribute("min", IdTaskStartDate.value);
+}
+
 $('#btnAddNewTask').click(function() {
   $('#modal-newTask').modal('show');
 });
