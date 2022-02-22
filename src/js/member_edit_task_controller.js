@@ -8,7 +8,7 @@ var currentTask = taskList.filter(task => task.taskId == currentTaskId)[0];
 var currentProject = projectList.filter(project => project.projectId == currentProjectId)[0];
 
 
-
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 document.getElementById("memberEditTaskName").value = currentTask.taskName;
 document.getElementById("memberEditTaskDescription").value = currentTask.taskDescription;
 document.getElementById("memberEditTaskStartDate").value = currentTask.startDate;

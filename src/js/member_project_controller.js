@@ -11,7 +11,7 @@ var taskList = getTasks();
 var userTaskList = taskList.filter(task => task.taskMemberEmail == getCurrentUser().email);
 
 
-//document.getElementById("navUserName").innerHTML= getCurrentUser().name
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 
 var userRelatedProjectList = projectList.filter(project => project.projectMembers.includes( getCurrentUser().email));
 

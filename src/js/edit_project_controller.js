@@ -23,7 +23,7 @@ if (mm < 10) {
 today = yyyy + '-' + mm + '-' + dd;
 IdProjectStartDate.setAttribute("min", today);
 
-//document.getElementById("navUserName").innerHTML= getCurrentUser().name
+document.getElementById("navUserName").innerHTML= getCurrentUser().name
 
 function setMinForProjectEndDate(){
   IdProjectEndDate.setAttribute("min", IdProjectStartDate.value);
