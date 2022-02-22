@@ -126,5 +126,9 @@ function managerEditTask(){
     newProjectList.push(projectToBeRemoved);    
     localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
 
+    var x = document.getElementById("toastEditTask");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
     setTimeout(function(){window.location.href="../../index.html";}, 3500);
 }

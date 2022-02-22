@@ -92,5 +92,9 @@ function memberEditTask(){
     newProjectList.push(projectToBeRemoved);    
     localStorage.setItem(PROJECTS, JSON.stringify(newProjectList));
 
+    var x = document.getElementById("memberToastEditTask");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
     setTimeout(function(){window.location.href="../../member_dashboard.html";}, 3500);
 }
