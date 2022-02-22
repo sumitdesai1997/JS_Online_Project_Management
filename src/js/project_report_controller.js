@@ -44,5 +44,5 @@ currentProject.taskList.forEach(function callback(task, index) {
   document.getElementById("estimatedDuration").innerHTML = currentProject.estimateHours+"hr";
   document.getElementById("timeSpent").innerHTML = totalTime+"hr";
 
-  document.getElementById("budgetEffi").innerHTML = currentProject.estimateBudget / totalAmount;
-  document.getElementById("timeEffi").innerHTML = currentProject.estimateHours / totalTime;
+  document.getElementById("budgetEffi").innerHTML = (currentProject.estimateBudget / totalAmount).toString().substring(0, 4);
+  document.getElementById("timeEffi").innerHTML = (currentProject.estimateHours / totalTime).toString().substring(0, 4);
