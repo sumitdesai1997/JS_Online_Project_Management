@@ -9,6 +9,7 @@ var currentProject = projectList.filter(project => project.projectId == currentP
 
 
 document.getElementById("navUserName").innerHTML= getCurrentUser().name
+
 document.getElementById("memberEditTaskName").value = currentTask.taskName;
 document.getElementById("memberEditTaskDescription").value = currentTask.taskDescription;
 document.getElementById("memberEditTaskStartDate").value = currentTask.startDate;
