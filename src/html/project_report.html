@@ -245,119 +245,199 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Completed Projects</h1>
+            <h1>Project Report</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Completed Projects</li>
+              <li class="breadcrumb-item active">Project Report</li>
             </ol>
           </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
-
+   
     <!-- Main content -->
     <section class="content">
 
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Projects</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card-body p-0">
-          <table class="table table-striped projects">
-              <thead>
-                  <tr>
-                      <th style="width: 1%">
-                            No.
-                      </th>
-                      <th style="width: 20%">
-                          Project Name
-                      </th>
-                      <th style="width: 30%">
-                          Team Members
-                      </th>
-                      <th>
-                          Project Progress
-                      </th>
-                      <th style="width: 8%" class="text-center">
-                          Status
-                      </th>
-                      <th style="width: 20%">
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-              </tbody>
-          </table>
-        </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- /.card -->
-
-      <div class="modal fade" id="modal-newMember">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Add new member</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Projects Detail</h3>
+  
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                <i class="fas fa-times"></i>
               </button>
             </div>
-            <div class="modal-body">
-              <div class="card-body">
-                
-                <div class="form-group">
-                  <label>Role of Member</label>
-                  <select id="selecteRoleOfMember" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true" onchange="onChangeOfRole(this.value)">
-                  <option selected disabled>Select the role of member</option>
-                  <option value="Business Analyst">Business Analyst</option>
-                  <option value="Front end developer">Front end developer</option>
-                  <option value="Back end developer">Back end developer</option>
-                  <option value="Full stack developer">Full stack developer</option>
-                  </select>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                <div class="row">
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Estimated budget</span>
+                        <span class="info-box-number text-center text-muted mb-0">2300</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Total amount spent</span>
+                        <span class="info-box-number text-center text-muted mb-0">2000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Estimated duration</span>
+                        <span class="info-box-number text-center text-muted mb-0">20</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-3">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Total time spent</span>
+                        <span class="info-box-number text-center text-muted mb-0">18</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Budget efficiency</span>
+                        <span class="info-box-number text-center text-muted mb-0">2000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="info-box bg-light">
+                      <div class="info-box-content">
+                        <span class="info-box-text text-center text-muted">Time efficiency</span>
+                        <span class="info-box-number text-center text-muted mb-0">2000</span>
+                      </div>
+                    </div>
+                  </div>                  
                 </div>
-
-                <div class="form-group">
-                  <label>Email</label>
-                  <select id="selecteMemberEmail" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                    <option selected="selected" disabled>Select memeber</option>
-                  </select>
+                <div class="row">
+                  <div class="col-12">
+                    <h4>Recent Activity</h4>
+                      <div class="post">
+                        <div class="user-block">
+                          <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                          <span class="username">
+                            <a href="#">Jonathan Burke Jr.</a>
+                          </span>
+                          <span class="description">Shared publicly - 7:45 PM today</span>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Lorem ipsum represents a long-held tradition for designers,
+                          typographers and the like. Some people hate it and argue for
+                          its demise, but others ignore.
+                        </p>
+  
+                        <p>
+                          <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
+                        </p>
+                      </div>
+  
+                      <div class="post clearfix">
+                        <div class="user-block">
+                          <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
+                          <span class="username">
+                            <a href="#">Sarah Ross</a>
+                          </span>
+                          <span class="description">Sent you a message - 3 days ago</span>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Lorem ipsum represents a long-held tradition for designers,
+                          typographers and the like. Some people hate it and argue for
+                          its demise, but others ignore.
+                        </p>
+                        <p>
+                          <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
+                        </p>
+                      </div>
+  
+                      <div class="post">
+                        <div class="user-block">
+                          <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                          <span class="username">
+                            <a href="#">Jonathan Burke Jr.</a>
+                          </span>
+                          <span class="description">Shared publicly - 5 days ago</span>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Lorem ipsum represents a long-held tradition for designers,
+                          typographers and the like. Some people hate it and argue for
+                          its demise, but others ignore.
+                        </p>
+  
+                        <p>
+                          <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
+                        </p>
+                      </div>
+                  </div>
                 </div>
-
+              </div>
+              <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+                <h3 class="text-primary" id="reportProjectName"></h3>
+                <p class="text-muted" id="reportProjectDescription"></p>
+                <br>
+                <div class="text-muted"><!-- 
+                  <p class="text-sm">Client Company
+                    <b class="d-block"></b>
+                  </p> -->
+                  <p class="text-sm">Project Manager
+                    <b class="d-block" id="reportManagerName"></b>
+                  </p>
+                  <p class="text-sm">Team members
+                    <b class="d-block" id="reportTeamMember"></b>
+                  </p>
+                </div>
+  
+                <!-- <h5 class="mt-5 text-muted">Project files</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
+                  </li>
+                  <li>
+                    <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a>
+                  </li>
+                  <li>
+                    <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-envelope"></i> Email-from-flatbal.mln</a>
+                  </li>
+                  <li>
+                    <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> Logo.png</a>
+                  </li>
+                  <li>
+                    <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Contract-10_12_2014.docx</a>
+                  </li>
+                </ul>
+                <div class="text-center mt-5 mb-3">
+                  <a href="#" class="btn btn-sm btn-primary">Add files</a>
+                  <a href="#" class="btn btn-sm btn-warning">Report contact</a>
+                </div> -->
               </div>
             </div>
-            <div class="modal-footer justify-content-between">
-              <!-- <button type="button" data-dismiss="modal">Close</button>
-              <button type="button">Save changes</button> -->
-
-              <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#modal-success">
-                Close
-              </button>
-
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success" onclick="addMemberToProject()">
-                Save
-              </button>
-            </div>
           </div>
-          <!-- /.modal-content -->
+          <!-- /.card-body -->
         </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
+        <!-- /.card -->
+      </section>
+      <!-- /.content -->
 
-    </section>
-    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
