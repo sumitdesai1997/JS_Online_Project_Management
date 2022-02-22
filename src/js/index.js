@@ -109,19 +109,29 @@ function addMemberToProject(){
 }
 
 function goToEditProject(index){
-    let currentProjectListInRecentView = getProjects().reverse().slice(0,5);
-   
-    localStorage.setItem(CURRENT_PROJECT_ID, JSON.stringify(currentProjectListInRecentView[index].projectId));
 
-   /*  for(var i = 0; i < newProjectList.length; i++){
-        if(newProjectList[i].projectName == selectEditProjectName){
-            console.log("name matched :: "+newProjectList[i].projectName+"=="+selectEditProjectName);
-            localStorage.setItem(CURRENT_PROJECT_INDEX, JSON.stringify(i));
-            break;
+    if(index == undefined || index == null){
+        let newProjectList = getProjects();
+        let selectEditProjectName = document.getElementById("selectEditProject").value;
+    
+         for(var i = 0; i < newProjectList.length; i++){
+            if(newProjectList[i].projectName == selectEditProjectName){
+                console.log("name matched :: "+newProjectList[i].projectName+"=="+selectEditProjectName);
+                localStorage.setItem(CURRENT_PROJECT_ID, JSON.stringify(newProjectList[i].projectId));
+                break;
+            }
         }
-    } */
+    
+        window.location.href = "./src/html/project-edit.html"
+    } else {
+        let currentProjectListInRecentView = getProjects().reverse().slice(0,5);
 
-    window.location.href = "./src/html/project-edit.html"
+        localStorage.setItem(CURRENT_PROJECT_ID, JSON.stringify(currentProjectListInRecentView[index].projectId));
+        window.location.href = "./src/html/project-edit.html"
+    }
+
+
+
 }
 
 function goToFilteredTask(index){
