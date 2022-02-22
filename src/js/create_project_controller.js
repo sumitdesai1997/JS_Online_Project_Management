@@ -50,14 +50,35 @@ function addProject(){
    
 }; */
 
-var project1 = new Project(projectId, projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
+if(projectName==""){
+  window.alert("Enter Project Name")
+}else if(projectDescription==""){
+  window.alert("Enter Project Description")
+}else if(projectStatus=="Select one"){
+  window.alert("Select project status")
+}else if(startDate==""){
+  window.alert("Enter start date for project")
+}else if(endDate==""){
+  window.alert("Enter end date for project")
+}else if(clientCompany==""){
+  window.alert("Enter Client's Company Name")
+}else if(estimateBudget==""){
+  window.alert("Enter Estimated Budget")
+}else if(estimateHours==""){
+  window.alert("Enter Estimated Hours")
+}
+
+else{
+  var project1 = new Project(projectId, projectName, projectDescription, projectStatus, startDate, endDate, clientCompany, estimateBudget, estimateHours, projectMembers, imgAvatar, taskList);
 
 
-  //createProject(project1);
+    //createProject(project1);
 
-  createProject(project1, function() {
-    resetForm();
-  });
+    createProject(project1, function() {
+      resetForm();
+    });
+
+  }
 }
 
 function resetForm(){
