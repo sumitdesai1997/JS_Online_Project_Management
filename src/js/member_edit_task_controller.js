@@ -12,6 +12,17 @@ var currentProject = projectList.filter(project => project.projectId == currentP
 document.getElementById("memberEditTaskName").value = currentTask.taskName;
 document.getElementById("memberEditTaskDescription").value = currentTask.taskDescription;
 document.getElementById("memberEditTaskStartDate").value = currentTask.startDate;
+if(!(currentTask.taskStatus == "Created" ||  currentTask.taskStatus == undefined)){
+    document.getElementById("memberEditTaskStatus").value = currentTask.taskStatus;
+}
+if(currentTask.isTaskIndependent == "No"){
+    let dependentTaskName = currentTask.dependentTask;
+    let dependentTask = taskList.filter(task => task.taskName == dependentTaskName)[0];
+
+    if(dependentTask.taskStatus != "Success"){
+        document.getElementById("memberEditTaskStatus").disabled = true;
+    }
+}
 document.getElementById("memberEditTaskEndDate").value = currentTask.endDate;
 document.getElementById("memberEditTaskHour").value = currentTask.taskEstimateHours;
 
