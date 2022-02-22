@@ -25,7 +25,7 @@ currentProject.taskList.forEach(function callback(task, index) {
     console.log(task.taskName+"---"+task.taskDescription);
     
     let amountSpent = parseInt(task.actualTaskHours) * (task.taskEstimateBudget / parseInt(task.taskEstimateHours)); 
-    let markup = "<tr><td>"+ (index + 1) +"</td><td>" + task.taskName +"</td><td>"+ task.taskDescription +"</td><td>"+task.taskEstimateBudget+"</td><td>" + amountSpent + "</td></tr>";
+    let markup = "<tr><td>"+ (index + 1) +"</td><td>" + task.taskName +"</td><td>"+ task.taskDescription +"</td><td>$"+task.taskEstimateBudget+"</td><td>$" + amountSpent + "</td></tr>";
      
     $("#taskBudget").append(markup);
     
@@ -39,10 +39,10 @@ currentProject.taskList.forEach(function callback(task, index) {
   document.getElementById("total").innerHTML ="$"+  Math.round(totalAmount * 1.18);
   document.getElementById("amountDue").innerHTML ="Final payment details:";
 
-  document.getElementById("estimatedBudget").innerHTML = currentProject.estimateBudget;
-  document.getElementById("amountSpent").innerHTML = totalAmount;
-  document.getElementById("estimatedDuration").innerHTML = currentProject.estimateHours;
-  document.getElementById("timeSpent").innerHTML = totalTime;
+  document.getElementById("estimatedBudget").innerHTML = "$"+currentProject.estimateBudget;
+  document.getElementById("amountSpent").innerHTML = "$"+totalAmount;
+  document.getElementById("estimatedDuration").innerHTML = currentProject.estimateHours+"hr";
+  document.getElementById("timeSpent").innerHTML = totalTime+"hr";
 
   document.getElementById("budgetEffi").innerHTML = currentProject.estimateBudget / totalAmount;
   document.getElementById("timeEffi").innerHTML = currentProject.estimateHours / totalTime;
